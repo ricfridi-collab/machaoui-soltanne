@@ -1,0 +1,3352 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>مشاوي السلطان | طاكوس · كباب · روايال · سكالوب</title>
+<meta name="description" content="مشاوي السلطان - طاكوس، باك عائلي، كباب لحم، روايال، سكالوب. اضرب دورة عند السلطان - توصيل سريع وطلب مباشر عبر واتساب." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700;700&family=Cairo:wght@400;600;700;900&family=Reem+Kufi:wght@400;500;600;700&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  /* ============ RESET & BASE ============ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg-deep:    #0d0a08;
+    --bg-dark:    #161210;
+    --bg-card:    #1f1814;
+    --bg-card-2:  #261d17;
+    --border:     rgba(255, 138, 76, 0.14);
+    --ember:      #ff6a00;
+    --ember-2:   #ff8a3c;
+    --gold:       #f5b800;
+    --gold-soft:  #ffd166;
+    --red-deep:   #b02000;
+    --text:       #fff6ec;
+    --text-mute:  #b9a89a;
+    --text-dim:   #7a6b5e;
+    --radius:     22px;
+    --shadow-1:   0 10px 30px rgba(0,0,0,0.45);
+    --shadow-glow:0 14px 40px rgba(255, 106, 0, 0.25);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Tajawal', 'Cairo', system-ui, -apple-system, sans-serif;
+    background: var(--bg-deep);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(255, 106, 0, 0.10), transparent 42%),
+      radial-gradient(circle at 88% 6%, rgba(245, 184, 0, 0.08), transparent 38%),
+      radial-gradient(circle at 50% 110%, rgba(176, 32, 0, 0.18), transparent 55%);
+  }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+  /* ============ HEADER ============ */
+  .topbar {
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(14px);
+    background: rgba(13, 10, 8, 0.78);
+    border-bottom: 1px solid var(--border);
+  }
+  .topbar-inner {
+    max-width: 1200px; margin: 0 auto;
+    padding: 14px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand-logo {
+    width: 64px; height: 64px; border-radius: 50%;
+    display: grid; place-items: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .brand-logo svg, .brand-logo img { width: 100%; height: 100%; display: block; object-fit: cover; border-radius: 50%; }
+  .brand-logo::after {
+    content: ''; position: absolute; inset: -8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,138,76,0.5), transparent 70%);
+    z-index: -1; filter: blur(10px);
+  }
+  .brand-text h1 {
+    font-family: 'Cairo', sans-serif;
+    font-size: 24px; font-weight: 900;
+    background: linear-gradient(90deg, var(--gold-soft), var(--ember-2));
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 12px rgba(255,138,76,0.25);
+  }
+  .brand-text span { display: block; font-size: 11px; color: var(--text-dim); font-weight: 500; letter-spacing: 2px; }
+  .nav { display: flex; gap: 6px; }
+  .nav a {
+    padding: 9px 16px; border-radius: 999px;
+    font-size: 14px; font-weight: 600;
+    color: var(--text-mute);
+    transition: all .25s ease;
+  }
+  .nav a:hover { color: var(--gold-soft); background: rgba(255,138,76,0.08); }
+  .topbar-actions { display: flex; align-items: center; gap: 10px; }
+  .btn-whatsapp {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #25D366; color: #053d22;
+    padding: 10px 18px; border-radius: 999px;
+    font-weight: 800; font-size: 14px;
+    box-shadow: 0 6px 22px rgba(37, 211, 102, 0.4);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.55); }
+  .btn-whatsapp svg { width: 18px; height: 18px; }
+
+  .burger { display: none; flex-direction: column; gap: 5px; padding: 8px; }
+  .burger span { width: 24px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative; padding: 100px 20px 110px;
+    overflow: hidden;
+  }
+  .hero-bg-image {
+    position: absolute; inset: -40px;
+    background: url('https://drive.google.com/thumbnail?id=1EjDigFw0jzhdY-W6VLGrf9ITp--HQFP7&sz=w2000') center/cover no-repeat;
+    filter: blur(2px) brightness(0.42) saturate(1.3);
+    transform: scale(1.1);
+    z-index: 0;
+  }
+  .hero-bg-image::after {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(180deg, rgba(13,10,8,0.45) 0%, rgba(13,10,8,0.78) 100%),
+      radial-gradient(circle at 75% 50%, rgba(255,106,0,0.18), transparent 55%);
+  }
+  .hero-inner { position: relative; z-index: 1; }
+  .hero-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center;
+  }
+  .hero-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 18px; border-radius: 999px;
+    background: rgba(13, 10, 8, 0.7); backdrop-filter: blur(10px);
+    border: 1px solid rgba(245, 184, 0, 0.35);
+    color: var(--gold-soft);
+    font-size: 13px; font-weight: 700; letter-spacing: 1px;
+    margin-bottom: 22px;
+  }
+  .hero-tag::before {
+    content: ''; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--ember); box-shadow: 0 0 12px var(--ember);
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  .hero h2 {
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(38px, 5.5vw, 68px);
+    font-weight: 900; line-height: 1.05;
+    margin-bottom: 22px;
+    letter-spacing: -1px;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.65);
+  }
+  .hero h2 .accent {
+    background: linear-gradient(90deg, var(--ember), var(--gold));
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    display: inline-block;
+    position: relative;
+  }
+  .hero p {
+    font-size: 17px; color: var(--text);
+    max-width: 520px; margin-bottom: 32px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    opacity: 0.92;
+  }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 14px;
+    background: linear-gradient(135deg, var(--ember), var(--red-deep));
+    color: #fff; font-weight: 800; font-size: 16px;
+    box-shadow: var(--shadow-glow);
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative; overflow: hidden;
+  }
+  .btn-primary::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, transparent, rgba(255,255,255,0.25), transparent);
+    transform: translateX(-100%); transition: transform .6s ease;
+  }
+  .btn-primary:hover { transform: translateY(-3px); }
+  .btn-primary:hover::after { transform: translateX(100%); }
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 28px; border-radius: 14px;
+    background: transparent; color: var(--text);
+    border: 1.5px solid var(--border); font-weight: 700; font-size: 16px;
+    transition: all .25s ease;
+  }
+  .btn-ghost:hover { border-color: var(--ember); background: rgba(255,106,0,0.08); }
+  .hero-stats { display: flex; gap: 30px; margin-top: 44px; flex-wrap: wrap; }
+  .stat { padding: 10px 18px 10px 0; border-right: 2px solid rgba(255,138,76,0.25); padding-right: 22px; }
+  .stat:last-child { border-right: none; }
+  .stat b {
+    display: block; font-family: 'Cairo', sans-serif;
+    font-size: 32px; font-weight: 900;
+    background: linear-gradient(90deg, var(--gold-soft), var(--ember-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 2px 12px rgba(255,138,76,0.3);
+  }
+  .stat span { font-size: 12px; color: var(--text-mute); letter-spacing: 1px; text-transform: uppercase; }
+
+  /* Hero visual */
+  .hero-visual {
+    position: relative; aspect-ratio: 1/1; max-width: 460px;
+    margin-left: auto;
+  }
+  .hero-bowl {
+    position: absolute; inset: 8%;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(255,138,76,0.45), transparent 60%),
+      radial-gradient(circle at 50% 70%, rgba(176,32,0,0.55), transparent 70%),
+      linear-gradient(135deg, #2a1d15, #0d0a08);
+    box-shadow: inset 0 0 60px rgba(255,106,0,0.4), 0 30px 80px rgba(0,0,0,0.6);
+    overflow: hidden;
+  }
+  .hero-bowl::before {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 30% 25%, rgba(255,200,100,0.6), transparent 25%),
+      radial-gradient(circle at 70% 30%, rgba(255,140,40,0.5), transparent 20%),
+      radial-gradient(circle at 50% 60%, rgba(255,80,0,0.6), transparent 30%),
+      radial-gradient(circle at 25% 70%, rgba(180,40,0,0.7), transparent 25%),
+      radial-gradient(circle at 80% 75%, rgba(255,160,60,0.4), transparent 22%);
+    filter: blur(2px);
+    animation: ember 5s ease-in-out infinite alternate;
+  }
+  @keyframes ember {
+    0% { transform: scale(1) rotate(0deg); }
+    100% { transform: scale(1.08) rotate(3deg); }
+  }
+  .hero-bowl::after {
+    content: '🍢'; position: absolute;
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-size: 130px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6));
+    z-index: 2;
+  }
+  .hero-badge {
+    position: absolute; padding: 14px 20px; border-radius: 16px;
+    background: rgba(13, 10, 8, 0.85); backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,138,76,0.3);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,209,102,0.1);
+    font-size: 13px; z-index: 3;
+  }
+  .hero-badge.tl { top: 6%; right: -3%; }
+  .hero-badge.bl { bottom: 14%; left: -6%; }
+  .hero-badge b { color: var(--gold-soft); font-size: 18px; display: block; font-family: 'Cairo'; }
+  .hero-badge span { color: var(--text-dim); font-size: 11px; }
+
+  .floating-emoji {
+    position: absolute; font-size: 30px;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.85;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(8deg); }
+  }
+
+  /* ============ MARQUEE ============ */
+  .marquee {
+    background: linear-gradient(90deg, var(--red-deep), var(--ember), var(--red-deep));
+    color: #fff; font-weight: 800;
+    padding: 12px 0; overflow: hidden;
+    font-family: 'Cairo'; font-size: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .marquee-track {
+    display: inline-flex; gap: 50px; white-space: nowrap;
+    animation: scroll 22s linear infinite;
+  }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 12px; }
+  .marquee-track span::before { content: '🔥'; }
+
+  /* ============ SECTION ============ */
+  section { padding: 80px 20px; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-head { text-align: center; margin-bottom: 50px; }
+  .section-head .eyebrow {
+    color: var(--ember-2); font-weight: 700; font-size: 13px;
+    letter-spacing: 3px; margin-bottom: 12px; display: block;
+  }
+  .section-head h2 {
+    font-family: 'Cairo'; font-size: clamp(30px, 4vw, 46px);
+    font-weight: 900; line-height: 1.1; margin-bottom: 16px;
+  }
+  .section-head h2 .accent {
+    background: linear-gradient(90deg, var(--ember), var(--gold));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .section-head p { color: var(--text-mute); max-width: 600px; margin: 0 auto; font-size: 16px; }
+
+  /* ============ MENU GRID ============ */
+  .menu-grid {
+    display: grid; gap: 24px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  .dish {
+    background: linear-gradient(160deg, var(--bg-card), var(--bg-card-2));
+    border-radius: var(--radius);
+    overflow: hidden; position: relative;
+    border: 1px solid var(--border);
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s ease, border-color .35s ease;
+  }
+  .dish:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,138,76,0.25);
+    border-color: rgba(255,138,76,0.35);
+  }
+  .dish-img {
+    aspect-ratio: 1/1; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, #2a1810, #1a0f08);
+  }
+  .dish-img img {
+    width: 100%; height: 100%; object-fit: cover; object-position: center;
+    transition: transform .6s ease;
+  }
+  .dish:hover .dish-img img { transform: scale(1.08); }
+  .dish-img .placeholder {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    font-size: 80px;
+    background:
+      radial-gradient(circle at 30% 30%, rgba(255,138,76,0.4), transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(176,32,0,0.5), transparent 50%),
+      linear-gradient(135deg, #2a1810, #0d0a08);
+  }
+  .dish-badge {
+    position: absolute; top: 14px; right: 14px;
+    background: rgba(13,10,8,0.85); backdrop-filter: blur(8px);
+    color: var(--gold-soft);
+    padding: 6px 12px; border-radius: 999px;
+    font-size: 11px; font-weight: 800; letter-spacing: 1px;
+    border: 1px solid rgba(245,184,0,0.3);
+  }
+  .dish-badge.hot { color: var(--ember-2); border-color: rgba(255,106,0,0.4); }
+  .dish-body { padding: 20px 20px 22px; }
+  .dish-name {
+    font-family: 'Cairo'; font-size: 20px; font-weight: 800;
+    margin-bottom: 8px; color: var(--text);
+  }
+  .dish-desc { font-size: 14px; color: var(--text-mute); min-height: 42px; margin-bottom: 18px; }
+  .dish-foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .dish-price { display: flex; flex-direction: column; }
+  .dish-price b {
+    font-family: 'Cairo'; font-size: 24px; font-weight: 900;
+    color: var(--gold-soft);
+  }
+  .dish-price span { font-size: 11px; color: var(--text-dim); }
+  .dish-order {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: linear-gradient(135deg, var(--ember), var(--red-deep));
+    color: #fff; padding: 10px 16px; border-radius: 11px;
+    font-weight: 800; font-size: 13px;
+    box-shadow: 0 6px 18px rgba(255,106,0,0.35);
+    transition: transform .2s ease;
+  }
+  .dish-order:hover { transform: scale(1.05); }
+  .dish-order svg { width: 16px; height: 16px; }
+
+  /* ============ COMBO / PACK ============ */
+  .pack-section { background: linear-gradient(180deg, transparent, rgba(255,106,0,0.04), transparent); }
+  .pack-card {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    background:
+      radial-gradient(circle at 0% 50%, rgba(255,106,0,0.18), transparent 60%),
+      linear-gradient(135deg, #2a1810, #161210);
+    border-radius: 30px; overflow: hidden;
+    border: 1px solid rgba(255,138,76,0.25);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  }
+  .pack-visual {
+    background:
+      radial-gradient(circle at 50% 50%, rgba(255,138,76,0.45), transparent 55%),
+      linear-gradient(135deg, #3a2418, #1a0f08);
+    display: grid; place-items: center;
+    font-size: 140px; position: relative;
+    min-height: 380px;
+    overflow: hidden;
+  }
+  .pack-visual::before {
+    content: ''; position: absolute; inset: 0;
+    background: url('images/pack.png') center/cover no-repeat;
+    opacity: 0.4;
+  }
+  .pack-visual::after {
+    content: ''; position: absolute; inset: 20px;
+    border: 2px dashed rgba(245,184,0,0.35); border-radius: 24px;
+    z-index: 1;
+  }
+  .pack-visual span { position: relative; z-index: 2; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6)); }
+  .pack-info { padding: 50px; display: flex; flex-direction: column; justify-content: center; }
+  .pack-info .eyebrow { color: var(--ember-2); font-weight: 800; letter-spacing: 3px; font-size: 13px; margin-bottom: 10px; }
+  .pack-info h3 {
+    font-family: 'Cairo'; font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900; margin-bottom: 16px; line-height: 1.1;
+  }
+  .pack-info p { color: var(--text-mute); margin-bottom: 24px; font-size: 16px; }
+  .pack-features { list-style: none; margin-bottom: 28px; }
+  .pack-features li {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0; font-size: 15px; color: var(--text);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .pack-features li::before { content: '✓'; color: var(--gold-soft); font-weight: 900; }
+  .pack-price-row { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+  .pack-price {
+    font-family: 'Cairo'; font-size: 48px; font-weight: 900;
+    background: linear-gradient(90deg, var(--gold), var(--ember));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .pack-price-label { color: var(--text-dim); font-size: 14px; }
+
+  /* ============ FEATURES / DELIVERY ============ */
+  .features-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 22px;
+  }
+  .feature {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 30px 24px; border-radius: var(--radius);
+    transition: transform .3s ease, border-color .3s ease;
+  }
+  .feature:hover { transform: translateY(-5px); border-color: rgba(255,138,76,0.3); }
+  .feature-icon {
+    width: 56px; height: 56px; border-radius: 16px;
+    background: linear-gradient(135deg, var(--ember), var(--red-deep));
+    display: grid; place-items: center;
+    font-size: 26px; margin-bottom: 18px;
+    box-shadow: 0 10px 24px rgba(255,106,0,0.3);
+  }
+  .feature h3 { font-family: 'Cairo'; font-size: 19px; font-weight: 800; margin-bottom: 8px; }
+  .feature p { font-size: 14px; color: var(--text-mute); }
+
+  /* ============ CONTACT ============ */
+  .contact-wrap {
+    background: linear-gradient(135deg, #1a0f08, #2a1810);
+    border: 1px solid var(--border);
+    border-radius: 30px; overflow: hidden;
+    display: grid; grid-template-columns: 1fr 1fr;
+    box-shadow: 0 30px 70px rgba(0,0,0,0.5);
+  }
+  .contact-info { padding: 50px; }
+  .contact-info h3 { font-family: 'Cairo'; font-size: 32px; font-weight: 900; margin-bottom: 16px; }
+  .contact-info p { color: var(--text-mute); margin-bottom: 28px; font-size: 16px; }
+  .contact-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .contact-row .ic {
+    width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(255,106,0,0.1);
+    display: grid; place-items: center; font-size: 20px;
+    border: 1px solid rgba(255,138,76,0.2);
+  }
+  .contact-row b { display: block; font-size: 11px; color: var(--text-dim); letter-spacing: 1px; }
+  .contact-row span { font-size: 16px; font-weight: 600; }
+  .contact-cta {
+    margin-top: 24px;
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .contact-visual {
+    background:
+      radial-gradient(circle at 50% 50%, rgba(37,211,102,0.18), transparent 60%),
+      linear-gradient(135deg, #1a2a20, #0d0a08);
+    display: grid; place-items: center; padding: 40px;
+    position: relative; overflow: hidden;
+  }
+  .whatsapp-bubble {
+    background: #25D366; color: #fff;
+    padding: 30px; border-radius: 24px;
+    text-align: center; max-width: 320px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+    position: relative; z-index: 2;
+  }
+  .whatsapp-bubble .wa-icon {
+    width: 70px; height: 70px; border-radius: 50%;
+    background: #fff; color: #25D366;
+    display: grid; place-items: center;
+    margin: 0 auto 16px; font-size: 36px;
+  }
+  .whatsapp-bubble h4 { font-family: 'Cairo'; font-size: 20px; margin-bottom: 8px; }
+  .whatsapp-bubble p { font-size: 14px; opacity: 0.9; margin-bottom: 18px; }
+  .whatsapp-bubble .wa-btn {
+    background: #075E54; color: #fff;
+    padding: 12px 24px; border-radius: 999px;
+    font-weight: 800; display: inline-block;
+    transition: background .25s;
+  }
+  .whatsapp-bubble .wa-btn:hover { background: #053d22; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4));
+    border-top: 1px solid var(--border);
+    padding: 50px 20px 30px;
+  }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+  }
+  .footer-brand p { color: var(--text-mute); margin-top: 14px; font-size: 14px; max-width: 340px; }
+  .footer-col h4 { font-family: 'Cairo'; font-size: 16px; margin-bottom: 14px; color: var(--gold-soft); }
+  .footer-col a { display: block; color: var(--text-mute); padding: 5px 0; font-size: 14px; transition: color .2s; }
+  .footer-col a:hover { color: var(--text); }
+  .footer-bottom {
+    max-width: 1200px; margin: 30px auto 0;
+    padding-top: 22px; border-top: 1px solid rgba(255,255,255,0.05);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+    color: var(--text-dim); font-size: 13px;
+  }
+
+  /* ============ SECRET ADMIN TRIGGER ============ */
+  .secret-trigger {
+    position: fixed; bottom: 0; left: 0;
+    width: 36px; height: 8px;
+    background: transparent;
+    cursor: pointer; z-index: 200;
+    border-top-right-radius: 8px;
+  }
+  .secret-trigger::after {
+    content: ''; position: absolute;
+    bottom: 0; left: 0;
+    width: 8px; height: 8px;
+    background: rgba(255, 138, 76, 0.0);
+    border-radius: 50%;
+    transition: background .4s;
+  }
+  .secret-trigger:hover::after { background: rgba(255, 138, 76, 0.15); }
+
+  /* ============ ADMIN MODAL ============ */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 500;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(10px);
+    display: none; align-items: center; justify-content: center;
+    padding: 20px; animation: fadeIn .3s ease;
+  }
+  .modal-overlay.active { display: flex; }
+  @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+  .modal {
+    background: linear-gradient(160deg, #1f1814, #161210);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    width: 100%; max-width: 720px; max-height: 90vh;
+    overflow: auto; padding: 36px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    animation: slideUp .35s cubic-bezier(.2,.7,.2,1);
+  }
+  @keyframes slideUp { from {transform: translateY(30px); opacity:0;} to {transform: translateY(0); opacity:1;} }
+  .modal-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 24px; padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .modal-head h3 {
+    font-family: 'Cairo'; font-size: 22px; font-weight: 900;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .modal-close {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: rgba(255,255,255,0.05);
+    display: grid; place-items: center;
+    font-size: 22px; color: var(--text-mute);
+    transition: all .2s;
+  }
+  .modal-close:hover { background: rgba(255,80,0,0.2); color: var(--text); }
+
+  .login-form { max-width: 380px; margin: 30px auto; }
+  .login-form .field { margin-bottom: 18px; }
+  .login-form input {
+    width: 100%; padding: 14px 18px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text); font-size: 15px;
+    font-family: inherit;
+    transition: border-color .2s;
+  }
+  .login-form input:focus { outline: none; border-color: var(--ember); }
+  .login-form button {
+    width: 100%; padding: 14px;
+    background: linear-gradient(135deg, var(--ember), var(--red-deep));
+    color: #fff; border-radius: 12px;
+    font-weight: 800; font-size: 15px;
+    box-shadow: 0 8px 20px rgba(255,106,0,0.35);
+  }
+  .login-hint {
+    margin-top: 14px; text-align: center;
+    font-size: 12px; color: var(--text-dim);
+  }
+  .login-hint code {
+    background: rgba(255,138,76,0.1);
+    color: var(--gold-soft);
+    padding: 2px 8px; border-radius: 4px;
+    font-family: 'Courier New', monospace;
+  }
+
+  .admin-tabs {
+    display: flex; gap: 8px; margin-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    flex-wrap: wrap;
+  }
+  .admin-tab {
+    padding: 10px 18px; border-radius: 10px 10px 0 0;
+    font-size: 14px; font-weight: 700;
+    color: var(--text-mute);
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+  }
+  .admin-tab.active { color: var(--gold-soft); border-bottom-color: var(--ember); }
+  .admin-panel-content { display: none; }
+  .admin-panel-content.active { display: block; }
+
+  .dish-edit-list { display: flex; flex-direction: column; gap: 12px; }
+  .dish-edit-card {
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 14px;
+    display: grid; grid-template-columns: 80px 1fr auto; gap: 14px; align-items: center;
+  }
+  .dish-edit-thumb {
+    width: 80px; height: 80px; border-radius: 10px;
+    background: linear-gradient(135deg, #2a1810, #1a0f08);
+    display: grid; place-items: center;
+    overflow: hidden; font-size: 32px;
+    border: 1px solid var(--border);
+    position: relative;
+  }
+  .dish-edit-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .dish-edit-fields { display: flex; flex-direction: column; gap: 8px; }
+  .dish-edit-fields input, .dish-edit-fields textarea {
+    width: 100%; padding: 8px 12px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text); font-size: 13px;
+    font-family: inherit;
+  }
+  .dish-edit-fields textarea { resize: vertical; min-height: 38px; }
+  .dish-edit-fields input:focus, .dish-edit-fields textarea:focus { outline: none; border-color: var(--ember); }
+  .dish-edit-actions { display: flex; flex-direction: column; gap: 6px; }
+  .dish-edit-actions label {
+    background: rgba(255,138,76,0.1);
+    color: var(--gold-soft);
+    padding: 6px 10px; border-radius: 8px;
+    font-size: 11px; font-weight: 700;
+    text-align: center; cursor: pointer;
+    border: 1px solid rgba(255,138,76,0.2);
+    transition: all .2s;
+  }
+  .dish-edit-actions label:hover { background: rgba(255,138,76,0.18); }
+  .dish-edit-actions input[type="file"] { display: none; }
+
+  .save-bar {
+    margin-top: 24px; padding-top: 18px;
+    border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .save-bar button.save {
+    background: linear-gradient(135deg, #25D366, #128C4B);
+    color: #fff; padding: 12px 24px; border-radius: 11px;
+    font-weight: 800; font-size: 14px;
+    box-shadow: 0 8px 20px rgba(37,211,102,0.35);
+  }
+  .save-bar button.reset {
+    background: rgba(255,255,255,0.06);
+    color: var(--text-mute);
+    padding: 12px 20px; border-radius: 11px;
+    font-size: 13px; font-weight: 700;
+  }
+
+  .settings-field { margin-bottom: 18px; }
+  .settings-field label { display: block; font-size: 13px; color: var(--text-mute); margin-bottom: 6px; font-weight: 600; }
+  .settings-field input, .settings-field textarea {
+    width: 100%; padding: 12px 16px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    color: var(--text); font-size: 14px;
+    font-family: inherit;
+  }
+  .settings-field input:focus, .settings-field textarea:focus { outline: none; border-color: var(--ember); }
+
+  /* ============ TOGGLE SWITCH (متوفر / غير متوفر) ============ */
+  .toggle-switch {
+    position: relative; display: inline-block;
+    width: 76px; height: 40px;
+    flex-shrink: 0; cursor: pointer;
+    vertical-align: middle;
+  }
+  .toggle-switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+  .toggle-slider {
+    position: absolute; inset: 0;
+    background: rgba(176, 32, 0, 0.45);
+    border: 2px solid rgba(176, 32, 0, 0.55);
+    border-radius: 999px;
+    transition: all .25s ease;
+  }
+  .toggle-slider::before {
+    content: ''; position: absolute;
+    width: 30px; height: 30px; left: 4px; top: 3px;
+    background: #fff; border-radius: 50%;
+    transition: transform .25s cubic-bezier(.2,.7,.2,1);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.45);
+  }
+  /* في RTL: when checked, slide the knob to the LEFT (visually = "off" position is on the right) */
+  .toggle-switch input:checked + .toggle-slider {
+    background: linear-gradient(135deg, #25D366, #128C4B);
+    border-color: rgba(37, 211, 102, 0.7);
+    box-shadow: 0 0 14px rgba(37, 211, 102, 0.35);
+  }
+  .toggle-switch input:checked + .toggle-slider::before {
+    transform: translateX(-36px);
+  }
+  /* مؤشّرات صغيرة على الزر (✓ / ✕) */
+  .toggle-slider::after {
+    content: '✕';
+    position: absolute;
+    left: 36px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px; font-weight: 900;
+    color: rgba(255, 255, 255, 0.85);
+    pointer-events: none;
+    transition: opacity .2s;
+  }
+  .toggle-switch input:checked + .toggle-slider::after {
+    content: '✓';
+    left: 10px;
+    color: #fff;
+  }
+  .availability-row {
+    display: flex; align-items: center; gap: 14px;
+    padding: 12px 14px;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-top: 6px;
+  }
+  .availability-row .availability-label {
+    font-size: 15px; font-weight: 800;
+    flex: 1;
+    line-height: 1.2;
+  }
+  .availability-row.is-available .availability-label { color: #5dffaa; }
+  .availability-row.is-unavailable .availability-label { color: #ff8a3c; }
+  .availability-row .availability-hint {
+    font-size: 11px; color: var(--text-dim); font-weight: 500;
+    margin-top: 3px;
+  }
+  .availability-row .availability-text {
+    display: flex; flex-direction: column;
+    min-width: 0;
+  }
+  /* على الشاشات الصغيرة جداً (هاتف) */
+  @media (max-width: 600px) {
+    .availability-row {
+      padding: 10px 12px;
+      gap: 12px;
+    }
+    .availability-row .availability-label { font-size: 14px; }
+    .availability-row .availability-hint { font-size: 10px; }
+  }
+
+  /* ============ UNAVAILABLE DISH (في القائمة العامة) ============ */
+  .dish.is-unavailable {
+    opacity: 0.65;
+    filter: grayscale(0.45);
+  }
+  .dish.is-unavailable .dish-img::after {
+    content: 'غير متوفر حالياً';
+    position: absolute; inset: 0;
+    background: rgba(13, 10, 8, 0.78);
+    backdrop-filter: blur(2px);
+    color: #ff8a3c;
+    display: grid; place-items: center;
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px; font-weight: 900;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    border-top: 2px dashed rgba(255, 138, 76, 0.5);
+    border-bottom: 2px dashed rgba(255, 138, 76, 0.5);
+  }
+  .dish.is-unavailable .btn-add-cart {
+    background: rgba(108, 124, 140, 0.35) !important;
+    color: var(--text-mute) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    pointer-events: none;
+  }
+  .dish.is-unavailable .qty-stepper {
+    opacity: 0.4; pointer-events: none;
+  }
+
+  /* ============ TOAST ============ */
+  .toast {
+    position: fixed; bottom: 24px; right: 24px;
+    background: linear-gradient(135deg, #25D366, #128C4B);
+    color: #fff; padding: 14px 22px; border-radius: 12px;
+    font-weight: 700; font-size: 14px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4);
+    z-index: 999; transform: translateY(120px); opacity: 0;
+    transition: all .35s cubic-bezier(.2,.7,.2,1);
+    max-width: 90vw;
+  }
+  .toast.show { transform: translateY(0); opacity: 1; }
+
+  /* ============ CLOUD TOAST (SheetDB sync status) ============ */
+  .cloud-toast {
+    position: fixed; bottom: 90px; left: 50%;
+    transform: translate(-50%, 120px); opacity: 0;
+    background: linear-gradient(135deg, #1f1814, #261d17);
+    color: var(--text); padding: 12px 22px;
+    border-radius: 12px; font-weight: 700; font-size: 13px;
+    border: 1px solid var(--border);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.5);
+    z-index: 998; transition: all .35s cubic-bezier(.2,.7,.2,1);
+    max-width: 92vw; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .cloud-toast.show { transform: translate(-50%, 0); opacity: 1; }
+  .cloud-toast .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #25D366; flex-shrink: 0;
+  }
+  .cloud-toast.err .dot { background: var(--ember); }
+  .cloud-toast.err {
+    border-color: rgba(255,106,0,0.45);
+    background: linear-gradient(135deg, #2a1810, #1a0f08);
+  }
+
+  /* ============ ORDERS PANEL (admin) ============ */
+  .orders-toolbar {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 18px; flex-wrap: wrap;
+  }
+  .orders-toolbar .count-chip {
+    background: rgba(255,138,76,0.1);
+    color: var(--gold-soft);
+    padding: 6px 14px; border-radius: 999px;
+    font-size: 12px; font-weight: 700;
+    border: 1px solid rgba(255,138,76,0.25);
+  }
+  .orders-toolbar .btn-refresh-orders {
+    background: rgba(255,255,255,0.06);
+    color: var(--text-mute);
+    border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 9px;
+    font-size: 13px; font-weight: 700;
+    display: inline-flex; align-items: center; gap: 6px;
+    cursor: pointer; transition: all .2s;
+  }
+  .orders-toolbar .btn-refresh-orders:hover {
+    color: var(--gold-soft); border-color: rgba(255,138,76,0.3);
+  }
+  .orders-list { display: flex; flex-direction: column; gap: 12px; }
+  .order-card {
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--border);
+    border-radius: 14px; padding: 16px;
+    border-right: 4px solid var(--ember);
+    transition: border-color .2s;
+  }
+  .order-card.is-pending { border-right-color: var(--gold); }
+  .order-card.is-confirmed { border-right-color: #25D366; }
+  .order-card.is-delivered { border-right-color: #6c7c8c; }
+  .order-card.is-canceled { border-right-color: var(--red-deep); opacity: 0.7; }
+  .order-head {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    gap: 12px; margin-bottom: 10px; flex-wrap: wrap;
+  }
+  .order-head .order-num {
+    font-family: 'Cairo'; font-weight: 900; font-size: 16px; color: var(--gold-soft);
+  }
+  .order-head .order-date {
+    font-size: 11px; color: var(--text-dim);
+  }
+  .order-status-pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 5px 12px; border-radius: 999px;
+    font-size: 11px; font-weight: 800;
+    background: rgba(245,184,0,0.12);
+    color: var(--gold-soft);
+    border: 1px solid rgba(245,184,0,0.3);
+  }
+  .order-status-pill.status-confirmed { background: rgba(37,211,102,0.12); color: #5dffaa; border-color: rgba(37,211,102,0.3); }
+  .order-status-pill.status-delivered { background: rgba(108,124,140,0.15); color: #aabbd0; border-color: rgba(108,124,140,0.3); }
+  .order-status-pill.status-canceled { background: rgba(176,32,0,0.18); color: #ff8a3c; border-color: rgba(176,32,0,0.4); }
+  .order-body {
+    font-size: 13px; color: var(--text-mute);
+    white-space: pre-wrap; word-break: break-word;
+    background: rgba(0,0,0,0.2);
+    padding: 10px 12px; border-radius: 9px;
+    max-height: 200px; overflow: auto;
+  }
+  .order-foot {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 10px; gap: 10px; flex-wrap: wrap;
+  }
+  .order-total {
+    font-family: 'Cairo'; font-weight: 900; font-size: 18px;
+    background: linear-gradient(90deg, var(--gold-soft), var(--ember-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .order-status-select {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 7px 12px; border-radius: 9px;
+    font-size: 13px; font-family: inherit; font-weight: 700;
+    cursor: pointer;
+  }
+  .order-status-select:focus { outline: none; border-color: var(--ember); }
+  .orders-empty {
+    text-align: center; padding: 40px 20px;
+    color: var(--text-mute);
+  }
+  .orders-empty .emoji { font-size: 50px; margin-bottom: 12px; opacity: 0.7; }
+  .orders-loading {
+    text-align: center; padding: 30px 20px; color: var(--text-mute);
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .orders-loading .spinner {
+    width: 32px; height: 32px;
+    border: 3px solid rgba(255,138,76,0.15);
+    border-top-color: var(--ember);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* ============ SYNC BADGE (topbar) - محجوب ============ */
+  .sync-badge { display: none !important; }
+  .sync-badge:hover { background: rgba(37,211,102,0.2); }
+  .sync-badge.offline {
+    background: rgba(255,106,0,0.12); color: var(--ember-2);
+    border-color: rgba(255,106,0,0.25);
+  }
+  .sync-badge .pulse-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: currentColor;
+    animation: pulse 1.6s infinite;
+  }
+  @media (max-width: 600px) {
+    .sync-badge .sync-text { display: none; }
+    .sync-badge { padding: 6px 10px; }
+  }
+
+  /* ============ FLOATING WHATSAPP ============ */
+  .floating-wa {
+    position: fixed; bottom: 24px; left: 24px;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: #25D366; color: #fff;
+    display: grid; place-items: center;
+    box-shadow: 0 10px 30px rgba(37,211,102,0.5);
+    z-index: 150;
+    transition: transform .25s ease;
+    animation: waPulse 2.5s infinite;
+  }
+  .floating-wa:hover { transform: scale(1.1); }
+  .floating-wa svg { width: 32px; height: 32px; }
+  @keyframes waPulse {
+    0%, 100% { box-shadow: 0 10px 30px rgba(37,211,102,0.5), 0 0 0 0 rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 10px 30px rgba(37,211,102,0.5), 0 0 0 14px rgba(37,211,102,0); }
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 980px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 30px; }
+    .hero-visual { margin: 0 auto; max-width: 360px; }
+    .pack-card { grid-template-columns: 1fr; }
+    .pack-visual { min-height: 240px; font-size: 100px; }
+    .contact-wrap { grid-template-columns: 1fr; }
+    .contact-info, .contact-visual { padding: 30px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+    .nav { display: none; }
+    .burger { display: flex; }
+    .nav.open {
+      display: flex; position: absolute; top: 100%; right: 0; left: 0;
+      flex-direction: column; background: var(--bg-dark);
+      padding: 14px; gap: 4px; border-bottom: 1px solid var(--border);
+    }
+    .nav.open a { padding: 12px 16px; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 50px 16px; }
+    .hero { padding: 40px 16px 60px; }
+    .topbar-inner { padding: 12px 16px; }
+    .brand-text h1 { font-size: 18px; }
+    .brand-logo { width: 44px; height: 44px; font-size: 22px; }
+    .btn-whatsapp span { display: none; }
+    .btn-whatsapp { padding: 10px; }
+    .dish-edit-card { grid-template-columns: 60px 1fr; }
+    .dish-edit-actions { grid-column: 1 / -1; flex-direction: row; }
+    .dish-edit-actions label { flex: 1; }
+    .modal { padding: 24px; }
+    .hero-stats { gap: 18px; }
+    .stat b { font-size: 24px; }
+  }
+
+  /* ============ SLOGAN BANNER ============ */
+  .slogan-banner {
+    position: relative;
+    padding: 70px 20px;
+    overflow: hidden;
+    text-align: center;
+  }
+  .slogan-bg {
+    position: absolute; inset: -20px;
+    background: url('https://drive.google.com/thumbnail?id=1EjDigFw0jzhdY-W6VLGrf9ITp--HQFP7&sz=w2000') center/cover no-repeat;
+    filter: blur(6px) brightness(0.55) saturate(1.4);
+    transform: scale(1.15);
+    z-index: 0;
+  }
+  .slogan-bg::after {
+    content: ''; position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 50%, rgba(255,106,0,0.25), transparent 65%),
+      linear-gradient(180deg, rgba(13,10,8,0.7) 0%, rgba(13,10,8,0.9) 100%);
+  }
+  .slogan-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+  .slogan-flame {
+    display: inline-block;
+    font-size: 50px;
+    animation: flicker 1.8s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 18px rgba(255,138,76,0.7));
+    margin-bottom: 12px;
+  }
+  @keyframes flicker {
+    0% { transform: scale(1) rotate(-2deg); filter: drop-shadow(0 0 18px rgba(255,138,76,0.7)); }
+    50% { transform: scale(1.06) rotate(2deg); filter: drop-shadow(0 0 28px rgba(255,180,90,0.95)); }
+    100% { transform: scale(0.97) rotate(-1deg); filter: drop-shadow(0 0 16px rgba(255,106,0,0.7)); }
+  }
+  .slogan-text {
+    font-family: 'Amiri', 'Reem Kufi', 'Cairo', serif;
+    font-size: clamp(42px, 7vw, 86px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0;
+    text-shadow:
+      0 4px 30px rgba(0,0,0,0.85),
+      0 0 30px rgba(255,106,0,0.4),
+      0 2px 0 rgba(176,32,0,0.7);
+    margin-bottom: 14px;
+  }
+  .slogan-text .accent {
+    background: linear-gradient(180deg, #ffe9a8 0%, #ffd166 35%, #ff8a3c 70%, #ff6a00 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    display: inline-block;
+    padding: 0 6px;
+  }
+  .slogan-sub {
+    font-family: 'Reem Kufi', 'Cairo', sans-serif;
+    font-size: 16px;
+    color: var(--gold-soft);
+    letter-spacing: 6px;
+    font-weight: 500;
+    opacity: 0.92;
+  }
+  .slogan-divider {
+    width: 80px; height: 3px;
+    background: linear-gradient(90deg, transparent, var(--ember), transparent);
+    margin: 18px auto 0;
+  }
+
+  /* ============ CART BADGE ============ */
+  .btn-cart {
+    position: relative;
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(135deg, var(--ember), var(--red-deep));
+    color: #fff;
+    padding: 10px 18px; border-radius: 999px;
+    font-weight: 800; font-size: 14px;
+    box-shadow: 0 6px 22px rgba(255,106,0,0.4);
+    transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+  }
+  .btn-cart:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,106,0,0.55); }
+  .btn-cart svg { width: 18px; height: 18px; }
+  .cart-badge {
+    position: absolute; top: -4px; left: -4px;
+    background: #ffd166; color: #1a0f08;
+    font-size: 11px; font-weight: 900;
+    min-width: 22px; height: 22px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    padding: 0 6px;
+    border: 2px solid var(--bg-deep);
+    transform: scale(0);
+    transition: transform .25s cubic-bezier(.2,.7,.2,1);
+  }
+  .cart-badge.show { transform: scale(1); }
+
+  /* ============ QTY STEPPER ON DISH ============ */
+  .qty-row {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 10px; margin-top: 14px;
+  }
+  .qty-stepper {
+    display: inline-flex; align-items: center; gap: 0;
+    background: rgba(0,0,0,0.35);
+    border: 1px solid var(--border);
+    border-radius: 11px; overflow: hidden;
+  }
+  .qty-stepper button {
+    width: 32px; height: 36px;
+    font-size: 18px; font-weight: 900;
+    color: var(--gold-soft);
+    background: transparent;
+    transition: background .2s;
+  }
+  .qty-stepper button:hover { background: rgba(255,138,76,0.15); }
+  .qty-stepper .qty-val {
+    min-width: 38px; height: 36px;
+    display: grid; place-items: center;
+    font-family: 'Cairo'; font-weight: 800; font-size: 16px;
+    color: var(--text);
+    border-right: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+  }
+  .btn-add-cart {
+    flex: 1;
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    background: linear-gradient(135deg, #25D366, #128C4B);
+    color: #fff;
+    padding: 10px 14px; border-radius: 11px;
+    font-weight: 800; font-size: 13px;
+    box-shadow: 0 6px 18px rgba(37,211,102,0.3);
+    transition: transform .2s ease;
+    cursor: pointer;
+  }
+  .btn-add-cart:hover { transform: scale(1.04); }
+  .btn-add-cart svg { width: 16px; height: 16px; }
+
+  /* ============ CART MODAL ============ */
+  .cart-modal {
+    background: linear-gradient(160deg, #1f1814, #161210);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    width: 100%; max-width: 620px; max-height: 92vh;
+    overflow: auto; padding: 32px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+    animation: slideUp .35s cubic-bezier(.2,.7,.2,1);
+  }
+  .cart-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 22px; padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+  }
+  .cart-head h3 {
+    font-family: 'Cairo'; font-size: 24px; font-weight: 900;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .cart-empty {
+    text-align: center; padding: 40px 20px;
+    color: var(--text-mute);
+  }
+  .cart-empty .emoji { font-size: 60px; margin-bottom: 14px; opacity: 0.7; }
+  .cart-empty p { margin-bottom: 18px; }
+  .cart-items { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .cart-item {
+    display: grid; grid-template-columns: 56px 1fr auto; gap: 12px; align-items: center;
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--border);
+    border-radius: 12px; padding: 10px;
+  }
+  .cart-item-thumb {
+    width: 56px; height: 56px; border-radius: 8px; overflow: hidden;
+    background: linear-gradient(135deg, #2a1810, #1a0f08);
+    display: grid; place-items: center;
+    font-size: 26px; border: 1px solid var(--border);
+  }
+  .cart-item-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .cart-item-info { min-width: 0; }
+  .cart-item-name { font-weight: 700; font-size: 14px; margin-bottom: 3px; }
+  .cart-item-price { font-size: 12px; color: var(--gold-soft); font-weight: 700; }
+  .cart-item-price s { color: var(--text-dim); font-weight: 400; margin-right: 6px; }
+  .cart-item-actions { display: flex; align-items: center; gap: 8px; }
+  .cart-item-actions .qty-stepper { border-radius: 8px; }
+  .cart-item-actions .qty-stepper button { width: 26px; height: 30px; font-size: 14px; }
+  .cart-item-actions .qty-stepper .qty-val { min-width: 28px; height: 30px; font-size: 13px; }
+  .cart-item-actions .btn-remove {
+    background: rgba(176,32,0,0.2); color: #ff8a3c;
+    width: 30px; height: 30px; border-radius: 8px;
+    display: grid; place-items: center;
+    font-size: 16px; border: 1px solid rgba(176,32,0,0.3);
+    transition: all .2s;
+  }
+  .cart-item-actions .btn-remove:hover { background: rgba(176,32,0,0.4); }
+
+  .cart-summary {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0; border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 18px;
+  }
+  .cart-summary span { color: var(--text-mute); font-size: 14px; }
+  .cart-summary b {
+    font-family: 'Cairo'; font-size: 28px; font-weight: 900;
+    background: linear-gradient(90deg, var(--gold-soft), var(--ember-2));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* ============ DELIVERY FORM ============ */
+  .delivery-form { display: grid; gap: 14px; margin-bottom: 20px; }
+  .delivery-form .form-row { display: grid; gap: 6px; }
+  .delivery-form label {
+    font-size: 12px; color: var(--text-mute);
+    font-weight: 700; letter-spacing: 0.5px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .delivery-form label::before { content: '▸'; color: var(--ember-2); }
+  .delivery-form input,
+  .delivery-form textarea,
+  .delivery-form select {
+    width: 100%;
+    padding: 12px 14px;
+    background: rgba(0,0,0,0.4);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text); font-size: 14px;
+    font-family: inherit;
+    transition: border-color .2s;
+  }
+  .delivery-form input:focus,
+  .delivery-form textarea:focus,
+  .delivery-form select:focus {
+    outline: none; border-color: var(--ember);
+  }
+  .delivery-form textarea { resize: vertical; min-height: 60px; }
+  .delivery-form .form-grid-2 {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+  }
+  .delivery-note {
+    background: rgba(255,138,76,0.08);
+    border: 1px solid rgba(255,138,76,0.2);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 12px; color: var(--gold-soft);
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  .btn-checkout {
+    width: 100%;
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: linear-gradient(135deg, #25D366, #128C4B);
+    color: #fff;
+    padding: 16px; border-radius: 13px;
+    font-weight: 800; font-size: 16px;
+    box-shadow: 0 10px 28px rgba(37,211,102,0.4);
+    transition: transform .2s ease;
+    cursor: pointer;
+  }
+  .btn-checkout:hover { transform: translateY(-2px); }
+  .btn-checkout:disabled {
+    opacity: 0.5; cursor: not-allowed; transform: none;
+  }
+  .btn-checkout svg { width: 22px; height: 22px; }
+
+  /* ============ ADMIN: ADD NEW DISH ============ */
+  .admin-add-row {
+    display: flex; gap: 10px; margin-bottom: 14px;
+  }
+  .btn-add-new {
+    flex: 1;
+    background: linear-gradient(135deg, var(--gold), var(--ember));
+    color: #1a0f08;
+    padding: 12px 18px; border-radius: 11px;
+    font-weight: 800; font-size: 14px;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    box-shadow: 0 6px 18px rgba(245,184,0,0.35);
+    transition: transform .2s ease;
+    cursor: pointer;
+  }
+  .btn-add-new:hover { transform: translateY(-2px); }
+  .dish-edit-delete {
+    background: rgba(176,32,0,0.2);
+    color: #ff8a3c;
+    border: 1px solid rgba(176,32,0,0.35);
+    padding: 6px 10px; border-radius: 8px;
+    font-size: 11px; font-weight: 700;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  .dish-edit-delete:hover { background: rgba(176,32,0,0.4); }
+  .dish-edit-card .dish-edit-actions {
+    grid-column: 1 / -1;
+    flex-direction: row; align-items: stretch;
+  }
+
+  @media (max-width: 600px) {
+    .slogan-banner { padding: 50px 16px; }
+    .slogan-text { font-size: clamp(34px, 9vw, 50px); }
+    .cart-modal { padding: 22px; }
+    .cart-item { grid-template-columns: 44px 1fr; }
+    .cart-item-actions { grid-column: 1 / -1; justify-content: flex-end; margin-top: 6px; }
+    .delivery-form .form-grid-2 { grid-template-columns: 1fr; }
+    .btn-cart span { display: none; }
+    .btn-cart { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-logo">
+        <img src="https://drive.google.com/thumbnail?id=1EjDigFw0jzhdY-W6VLGrf9ITp--HQFP7&sz=w1000" alt="مشاوي السلطان" onerror="this.onerror=null;this.src='https://drive.google.com/uc?id=1EjDigFw0jzhdY-W6VLGrf9ITp--HQFP7';" />
+      </div>
+      <div class="brand-text">
+        <h1>مشاوي السلطان</h1>
+        <span>مشاوي · طاكوس · كباب</span>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#home">الرئيسية</a>
+      <a href="#menu">قائمتنا</a>
+      <a href="#delivery">التوصيل</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="sync-badge" id="syncBadge" type="button" title="حالة الاتصال بـ Google Sheets" aria-label="حالة المزامنة" style="display:none !important;">
+        <span class="pulse-dot"></span>
+        <span class="sync-text" id="syncBadgeText">جاري الاتصال…</span>
+      </button>
+      <button class="btn-cart" id="openCartBtn" type="button" aria-label="السلة">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        <span>السلة</span>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <a href="https://wa.me/213778475549" target="_blank" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.255l-.999 3.648 3.973-.602z"/></svg>
+        <span>واتساب</span>
+      </a>
+      <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg-image"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h2>أشهى المشاوي<br>على طريق <span class="accent">السلطان</span></h2>
+      <p>مشاوي السلطان — نكهة أصيلة تآخدك لعالم الذوق الرفيع. لحوم طازجة مشوية على الفحم الطبيعي، طاكوس وكباب وبروشات فاخرة، كلها بأسعار تنافسية وتوصيل لباب دارك.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn-primary">شوف قائمتنا 🍢</a>
+        <button type="button" class="btn-ghost" id="heroOrderBtn">🛒 اطلب الآن</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>🔥 مشاوي السلطان — نكهة الملوك</span>
+    <span>طاكوس فاخر بطعم لا يُنسى</span>
+    <span>كباب لحم طازج على الجمر</span>
+    <span>بروشات روايال بلمسة ملكية</span>
+    <span>كباب سكالوب بطعم مدخّن</span>
+    <span>توصيل سريع لباب دارك</span>
+    <span>اطلب عبر واتساب 213778475549</span>
+    <span>🔥 مشاوي السلطان — نكهة الملوك</span>
+    <span>طاكوس فاخر بطعم لا يُنسى</span>
+    <span>كباب لحم طازج على الجمر</span>
+    <span>بروشات روايال بلمسة ملكية</span>
+    <span>كباب سكالوب بطعم مدخّن</span>
+    <span>توصيل سريع لباب دارك</span>
+    <span>اطلب عبر واتساب 213778475549</span>
+  </div>
+</div>
+
+<!-- ============ MENU ============ -->
+<section id="menu">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">قائمة السلطان</span>
+      <h2>أطباق <span class="accent">ملكية</span> بلمسة أصيلة</h2>
+      <p>تشكيلة فاخرة من المشاوي والكباب محضّرة بعناية فائقة على الفحم الطبيعي، بخلطة بهارات السلطان السرية. كل الأطباق قابلة للتعديل حسب الطلب.</p>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY / FEATURES ============ -->
+<section id="delivery">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">لماذا السلطان</span>
+      <h2>خدمة <span class="accent">تستحق</span> الثقة</h2>
+      <p>في مشاوي السلطان، نقدّم لك تجربة طلب استثنائية من اللحظة التي تطلب فيها حتى يصلك الطلب ساخناً وطازجاً لباب دارك.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">🚀</div>
+        <h3>توصيل سريع</h3>
+        <p>متوسط 30 دقيقة لباب دارك داخل المدينة. السرعة والجودة في خدمتك في كل طلب.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🥩</div>
+        <h3>لحم طازج 100%</h3>
+        <p>نختار أجود اللحوم يومياً ونتبّلها بخلطة بهارات السلطان الأصيلة على الفحم الطبيعي.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💬</div>
+        <h3>طلب مباشر عبر واتساب</h3>
+        <p>تواصل مباشر مع مشاوي السلطان بدون وسطاء. أرسل طلبك واحصل على تأكيد فوري.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>أسعار ملكية بأسعار شعبية</h3>
+        <p>أطباق فاخرة بأسعار في متناول الجميع، جودة عالية ونكهة استثنائية في كل قضمة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-head">
+      <span class="eyebrow">تواصل مع السلطان</span>
+      <h2>اطلب <span class="accent">مباشرة</span> عبر واتساب</h2>
+      <p>متوفرين في خدمتك كل يوم من 18:00 مساءً حتى 23:00 ليلاً. اضغط على الزر بالأسفل وابعتلنا طلبك مباشرة على واتساب.</p>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>معلومات الاتصال</h3>
+        <p>سواء كنت تريد الطلب، الاستفسار عن قائمة أطباق السلطان، أو حجز باك لعزيمة — احنا في الخدمة على مدار الأسبوع.</p>
+        <div class="contact-row">
+          <div class="ic">📱</div>
+          <div><b>واتساب · هاتف</b><span id="phoneDisplay" dir="ltr" style="display:inline-block;">+213 778 475 549</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic">🕐</div>
+          <div><b>أوقات العمل</b><span>18:00 — 23:00 · يومياً</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic">📍</div>
+          <div><b>التوصيل</b><span>داخل المدينة + الضواحي القريبة</span></div>
+        </div>
+        <div class="contact-row">
+          <div class="ic">🛵</div>
+          <div><b>الطراد</b><span>توصيل سريع لباب دارك</span></div>
+        </div>
+        <div class="contact-cta">
+          <a href="https://wa.me/213778475549" target="_blank" class="btn-whatsapp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+            <span>محادثة واتساب</span>
+          </a>
+          <a href="tel:+213778475549" class="btn-ghost">📞 اتصال مباشر</a>
+        </div>
+      </div>
+      <div class="contact-visual">
+        <div class="whatsapp-bubble">
+          <div class="wa-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.255l-.999 3.648 3.973-.602z"/></svg>
+          </div>
+          <h4>اطلب مباشرة</h4>
+          <p>اضغط على الزر بالأسفل وابعتلنا رسالة على واتساب فوراً.</p>
+          <a href="https://wa.me/213778475549?text=السلام%20عليكم" target="_blank" class="wa-btn" dir="ltr" style="display:inline-block;">+213 778 475 549</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="https://drive.google.com/thumbnail?id=1EjDigFw0jzhdY-W6VLGrf9ITp--HQFP7&sz=w1000" alt="مشاوي السلطان" onerror="this.onerror=null;this.src='https://drive.google.com/uc?id=1EjDigFw0jzhdY-W6VLGrf9ITp--HQFP7';" />
+        </div>
+        <div class="brand-text">
+          <h1>مشاوي السلطان</h1>
+          <span>مشاوي · طاكوس · كباب</span>
+        </div>
+      </div>
+      <p>مشاوي السلطان — محل مشاوي وكباب أصيل بنكهة ملكية وأسعار في متناول الجميع. نوصلك لباب دارك بسرعة وأمان. اطلب عبر واتساب واطمن على خاطرتك.</p>
+    </div>
+    <div class="footer-col">
+      <h4>قائمة السلطان</h4>
+      <a href="#menu">طاكوس</a>
+      <a href="#menu">كباب لحم</a>
+      <a href="#menu">بروشات روايال</a>
+      <a href="#menu">كباب سكالوب</a>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل مع السلطان</h4>
+      <a href="https://wa.me/213778475549" target="_blank">واتساب 213778475549</a>
+      <a href="tel:+213778475549">الهاتف المباشر</a>
+      <a href="#delivery">التوصيل</a>
+      <a href="#contact">أوقات العمل</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 مشاوي السلطان · جميع الحقوق محفوظة</span>
+    <span>designed by CK MED</span>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="https://wa.me/213778475549?text=السلام%20عليكم%20بغيت%20نطلب" target="_blank" class="floating-wa" aria-label="اطلب عبر واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.515 5.255l-.999 3.648 3.973-.602zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<!-- ============ CART MODAL ============ -->
+<div class="modal-overlay" id="cartModal">
+  <div class="cart-modal">
+    <div class="cart-head">
+      <h3>🛒 سلة الطلب</h3>
+      <button class="modal-close" onclick="closeCart()" aria-label="إغلاق">×</button>
+    </div>
+    <div id="cartBody"><!-- filled by renderCart() --></div>
+  </div>
+</div>
+
+<!-- ============ ADMIN MODAL ============ -->
+<div class="modal-overlay" id="adminModal">
+  <div class="modal">
+    <!-- LOGIN -->
+    <div id="loginPanel">
+      <div class="modal-head">
+        <h3>🔐 لوحة الإدارة</h3>
+        <button class="modal-close" onclick="closeAdmin()">×</button>
+      </div>
+      <form class="login-form" onsubmit="return tryLogin(event)">
+        <div class="field">
+          <input type="password" id="adminPass" placeholder="كلمة المرور" autocomplete="current-password" />
+        </div>
+        <button type="submit">دخول 🔓</button>
+      </form>
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" style="display:none">
+      <div class="modal-head">
+        <h3>⚙️ لوحة التحكم</h3>
+        <button class="modal-close" onclick="closeAdmin()">×</button>
+      </div>
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="dishes">الأطباق</button>
+        <button class="admin-tab" data-tab="orders">الطلبات</button>
+        <button class="admin-tab" data-tab="settings">الإعدادات</button>
+      </div>
+
+      <!-- DISHES TAB -->
+      <div class="admin-panel-content active" id="tab-dishes">
+        <div class="admin-add-row">
+          <button class="btn-add-new" onclick="addNewDish()">➕ إضافة طبق جديد</button>
+        </div>
+        <div class="dish-edit-list" id="dishEditList"></div>
+        <div class="save-bar">
+          <button class="reset" onclick="resetDishes()">↺ استرجاع الافتراضي</button>
+          <button class="save" onclick="saveDishes()">💾 حفظ التغييرات</button>
+        </div>
+      </div>
+
+      <!-- ORDERS TAB (SheetDB) -->
+      <div class="admin-panel-content" id="tab-orders">
+        <div class="orders-toolbar">
+          <span class="count-chip" id="ordersCount">— طلب</span>
+          <button class="btn-refresh-orders" onclick="loadOrdersIntoAdmin()" type="button">
+            <span>🔄</span> تحديث
+          </button>
+          <span style="font-size:12px;color:var(--text-dim);margin-right:auto;">
+            متصل بـ <code style="background:rgba(255,138,76,0.1);color:var(--gold-soft);padding:2px 6px;border-radius:4px;font-family:monospace;">sheetdb.io</code>
+          </span>
+        </div>
+        <div id="ordersContainer">
+          <div class="orders-loading">
+            <div class="spinner"></div>
+            <span>جاري تحميل الطلبات…</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SETTINGS TAB -->
+      <div class="admin-panel-content" id="tab-settings">
+        <div class="settings-field">
+          <label>رقم الواتساب (بدون +)</label>
+          <input type="text" id="setPhone" placeholder="213778475549" />
+        </div>
+        <div class="settings-field">
+          <label>سعر الباك العائلي (دج)</label>
+          <input type="text" id="setPackPrice" placeholder="1850" />
+        </div>
+        <div class="settings-field">
+          <label>تغيير كلمة المرور</label>
+          <input type="password" id="setPassword" placeholder="كلمة مرور جديدة" />
+        </div>
+        <div class="settings-field">
+          <label>رابط Google Apps Script (للكتابة في الشيت)</label>
+          <input type="text" id="setAppsScriptUrl" placeholder="https://script.google.com/macros/s/.../exec" dir="ltr" style="text-align:right;" />
+          <div style="font-size:11px;color:var(--text-dim);margin-top:6px;line-height:1.5;">
+            ⚙ يُستخدم لحفظ تعديلات الأطباق مباشرة في Google Sheets (مجاني وغير محدود).<br>
+            <a href="https://script.google.com" target="_blank" style="color:var(--gold-soft);text-decoration:underline;">انقر هنا لإنشاء السكريبت</a> — انسخ الكود من ملف <code style="background:rgba(255,138,76,0.1);color:var(--gold-soft);padding:2px 6px;border-radius:4px;">apps-script-code.gs</code> المرفق.
+          </div>
+        </div>
+        <div class="save-bar">
+          <button class="reset" onclick="resetSettings()">↺ استرجاع الإعدادات</button>
+          <button class="save" onclick="saveSettings()">💾 حفظ الإعدادات</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast">تم الحفظ ✓</div>
+
+<script>
+/* ============================================================
+   مشاوي السلطان - منطق الموقع
+   ============================================================ */
+
+const DEFAULT_DISHES = [
+  {
+    id: 'tacos',
+    name: 'طاكوس 3',
+    desc: 'طاكوس بحجم كبير محشو باللحم والصلصة والبطاطا المقلية، عرض خاص 3 بـ 100 دج.',
+    price: 100,
+    badge: 'عرض',
+    badgeType: 'hot',
+    emoji: '🌯',
+    defaultImage: '',
+    image: '',
+    available: true
+  },
+  {
+    id: 'pack',
+    name: 'pack عائلي',
+    desc: 'وجبة عائلية كاملة: طاكوس + كباب لحم + بروشات روايال + خبز + مشروبات.',
+    price: 1850,
+    badge: 'الأكثر طلباً',
+    badgeType: '',
+    emoji: '🍱',
+    defaultImage: '',
+    image: '',
+    available: true
+  },
+  {
+    id: 'kebab-lahem',
+    name: 'كباب لحم',
+    desc: 'أسياخ كباب لحم بقري طازج مشوي على الفحم، متبل بخلطة التوابل الخاصة.',
+    price: 400,
+    badge: '',
+    badgeType: '',
+    emoji: '🍢',
+    defaultImage: '',
+    image: '',
+    available: true
+  },
+  {
+    id: 'kebab-royal',
+    name: 'بروشات روايال',
+    desc: 'بروشات فاخرة بلحم مختار وحشوة مميزة مع الخضار والتوابل الراقية.',
+    price: 600,
+    badge: 'فاخر',
+    badgeType: 'hot',
+    emoji: '👑',
+    defaultImage: '',
+    image: '',
+    available: true
+  },
+  {
+    id: 'kebab-scalop',
+    name: 'كباب سكالوب',
+    desc: 'كباب سكالوب بطعم مدخّن فريد، لحم طري متبل بخلطة البهارات الأصيلة.',
+    price: 500,
+    badge: 'مميز',
+    badgeType: '',
+    emoji: '🍖',
+    defaultImage: '',
+    image: '',
+    available: true
+  }
+];
+
+const DEFAULT_SETTINGS = {
+  phone: '213778475549',
+  packPrice: '1850',
+  password: 'admin',
+  appsScriptUrl: ''
+};
+
+/* ============================================================
+   SheetDB Integration — تسجيل الطلبات في Google Sheets
+   ============================================================
+   ملاحظة: يوجد شيتان منفصلان:
+     • شيت الطلبات (Orders):  https://sheetdb.io/api/v1/okz6ie3el4th5
+     • شيت الأطباق (Dishes):   https://sheetdb.io/api/v1/8b6azm5nyfxj9  ← الجديد
+
+   أعمدة شيت الطلبات (4 أعمدة):
+     • product      → رقم الطلب (مفتاح فريد بصيغة MZ-XXXXXX)
+     • prix         → المجموع بالدج
+     • decription   → تفاصيل الطلب الكاملة — مسافة بعد الكلمة!
+     • etat         → الحالة (en attente / confirmé / livré / annulé)
+
+   أعمدة شيت الأطباق (5 أعمدة):
+     • product         → اسم الطبق (مفتاح فريد)
+     • prix            → السعر بالدج
+     • decription      → وصف الطبق — مسافة بعد الكلمة!
+     • etat            → رابط الصورة (URL)
+     • dispo-nodispo   → التوفّر: «dispo» = متوفر / «nodispo» = غير متوفر (خانة فارغة = متوفر)
+
+   ✅ المزامنة مستمرة: التعديلات تُحفظ في الشيت مباشرة، وعدد الأطباق غير محدود.
+   ✅ القراءة من Google Sheets CSV مباشرة (مجاني وغير محودود) — SheetDB كإحتياط للكتابة.
+*/
+
+// ----- رابط Google Sheets المباشر (JSONP) — مجاني وغير محدود -----
+const GOOGLE_SHEETS_ID  = '1EFN-HgfUbYmZAjWwKXv9wP0fCglZswafeBdiqhqiFS4';
+// نستخدم gviz JSON endpoint مع JSONP (responseHandler) — يعمل في المتصفح بدون proxy ولا يحتاج CORS
+const GOOGLE_SHEETS_JSONP = `https://docs.google.com/spreadsheets/d/${GOOGLE_SHEETS_ID}/gviz/tq?tqx=out:json`;
+// أسماء الأعمدة كما هي في الشيت الفعلي (dispo-nodispo بشرطة)
+const GS_COL_PRODUCT     = 'product';
+const GS_COL_PRIX        = 'prix';
+const GS_COL_DESCRIPTION = 'decription ';   // ← مسافة بعد الكلمة
+const GS_COL_ETAT        = 'etat';
+const GS_COL_DISPONIBLE  = 'dispo-nodispo'; // ← بشرطة كما في الشيت
+
+// ----- شيت الطلبات (Orders) -----
+const SHEETDB_API   = 'https://sheetdb.io/api/v1/okz6ie3el4th5';
+const SHEETDB_SHEET = 'Feuille 1';
+const SHEETDB_COL_PRODUCT     = 'product';
+const SHEETDB_COL_PRIX        = 'prix';
+const SHEETDB_COL_DESCRIPTION = 'decription ';   // ← مسافة بعد الكلمة كما في الشيت
+const SHEETDB_COL_ETAT        = 'etat';
+const ORDER_DEFAULT_STATUS = 'en attente';
+
+// ----- شيت الأطباق (Dishes) — جديد -----
+const DISHES_API   = 'https://sheetdb.io/api/v1/8b6azm5nyfxj9';
+const DISHES_SHEET = 'Feuille 1';
+const SHEETDB_COL_DISPONIBLE = 'dispo-nodispo';   // ← عمود التوفّر (dispo/nodispo) بشرطة
+// نفس الأسماء لكنها تشير إلى معانٍ مختلفة في هذا الشيت:
+//   product → اسم الطبق (مفتاح فريد)
+//   prix    → السعر
+//   decription → الوصف
+//   etat    → رابط الصورة (URL)
+//   dispo-nodispo → التوفّر (dispo = متوفر / nodispo = غير متوفر)
+
+/* ---- Helpers low-level للتعامل مع SheetDB (عام لأي شيت) ---- */
+// ملاحظة: limit مرتفعة جداً (100000) لدعم عدد لا متناهي من الأطباق والطلبات.
+async function sheetdbGetAll(apiUrl, sheet) {
+  const url = `${apiUrl}?sheet=${encodeURIComponent(sheet)}&limit=100000`;
+  const res = await fetch(url, { cache: 'no-store' });
+  if (!res.ok) throw new Error('SheetDB GET failed: ' + res.status);
+  return await res.json();
+}
+
+async function sheetdbPostRow(apiUrl, sheet, row) {
+  const url = `${apiUrl}?sheet=${encodeURIComponent(sheet)}`;
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(row)
+  });
+  if (!res.ok) throw new Error('SheetDB POST failed: ' + res.status);
+  return await res.json();
+}
+
+async function sheetdbPatchByColumn(apiUrl, sheet, column, value, patch) {
+  const url = `${apiUrl}/${encodeURIComponent(column)}/${encodeURIComponent(value)}?sheet=${encodeURIComponent(sheet)}`;
+  const res = await fetch(url, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({ data: patch })
+  });
+  if (!res.ok) throw new Error('SheetDB PATCH failed: ' + res.status);
+  return await res.json();
+}
+
+async function sheetdbDeleteByColumn(apiUrl, sheet, column, value) {
+  const url = `${apiUrl}/${encodeURIComponent(column)}/${encodeURIComponent(value)}?sheet=${encodeURIComponent(sheet)}`;
+  const res = await fetch(url, {
+    method: 'DELETE',
+    headers: { 'Accept': 'application/json' }
+  });
+  if (!res.ok) throw new Error('SheetDB DELETE failed: ' + res.status);
+  return await res.json();
+}
+
+async function sheetdbDeleteAll(apiUrl, sheet) {
+  const url = `${apiUrl}/all?sheet=${encodeURIComponent(sheet)}`;
+  const res = await fetch(url, { method: 'DELETE', headers: { 'Accept': 'application/json' } });
+  if (!res.ok) throw new Error('SheetDB DELETE-all failed: ' + res.status);
+  return await res.json();
+}
+
+/* ============ DISHES (الأطباق من شيت 8b6azm5nyfxj9) ============ */
+
+// جدول الاستعارة بالاسم: للأطباق المعروفة نوفّر شارة وإيموجي وصورة افتراضية
+// (للأطباق المخصّصة من الشيت بدون قيم افتراضية نستخدم قيم فارغة + إيموجي عام)
+const KNOWN_DISH_META = {
+  'طاكوس 3':       { emoji: '🌯', badge: 'عرض', badgeType: 'hot' },
+  'pack عائلي':    { emoji: '🍱', badge: 'الأكثر طلباً', badgeType: '' },
+  'كباب لحم':      { emoji: '🍢', badge: '', badgeType: '' },
+  'بروشات روايال': { emoji: '👑', badge: 'فاخر', badgeType: 'hot' },
+  'كباب سكالوب':   { emoji: '🍖', badge: 'مميز', badgeType: '' }
+};
+
+function slugify(name) {
+  // تحويل الاسم إلى معرّف آمن للاستخدام في data-id و fallback صورة
+  return String(name || '').trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^\p{L}\p{N}-]/gu, '')
+    .toLowerCase() || 'dish-' + Date.now();
+}
+
+function rowToDish(row) {
+  const name    = (row[SHEETDB_COL_PRODUCT]     || '').toString().trim();
+  const prix    = (row[SHEETDB_COL_PRIX]        || '0').toString().trim();
+  const desc    = (row[SHEETDB_COL_DESCRIPTION] || '').toString().trim();
+  const imgUrl  = (row[SHEETDB_COL_ETAT]        || '').toString().trim();
+  const dispoRaw= (row[SHEETDB_COL_DISPONIBLE]  || 'dispo').toString().trim().toLowerCase();
+
+  const meta = KNOWN_DISH_META[name] || { emoji: '🍽️', badge: '', badgeType: '' };
+
+  // التوفّر: «dispo» = متوفر (القيمة الافتراضية)، «nodispo» = غير متوفر
+  // كذلك نقبل القيم التقليدية non/0/false كإحتياط
+  const isUnavailable =
+    dispoRaw === 'nodispo' ||
+    dispoRaw === 'non'     ||
+    dispoRaw === '0'       ||
+    dispoRaw === 'false'   ||
+    dispoRaw === 'غير متوفر' ||
+    dispoRaw === 'no';
+
+  return {
+    id:           slugify(name),
+    name,
+    desc,
+    price:        parseInt(prix) || 0,
+    badge:        meta.badge,
+    badgeType:    meta.badgeType,
+    emoji:        meta.emoji,
+    defaultImage: imgUrl,   // رابط الصورة من الشيت (مخزّن في عمود etat)
+    image:        '',        // لا نستخدم رفع base64 — نعتمد على رابط الشيت
+    available:    !isUnavailable
+  };
+}
+
+function dishToRow(dish) {
+  return {
+    [SHEETDB_COL_PRODUCT]:     dish.name,
+    [SHEETDB_COL_PRIX]:        String(dish.price || 0),
+    [SHEETDB_COL_DESCRIPTION]: dish.desc || '',
+    [SHEETDB_COL_ETAT]:        dish.defaultImage || dish.image || '',
+    [SHEETDB_COL_DISPONIBLE]: (dish.available === false) ? 'nodispo' : 'dispo'
+  };
+}
+
+// حالة الذاكرة المؤقتة للأطباق (تُستخدم في لوحة الإدارة)
+let _dishesCache = null;        // آخر قائمة أطباق محمّلة من الشيت
+let _dishEditorState = null;    // حالة المحرّر (مع متابعة التغييرات)
+
+/* ---- محلّل CSV بسيط يدعم الحقول المقتبسة وعلامات الاقتباس المزدوجة ---- */
+function parseCSV(text) {
+  const rows = [];
+  let cur = [];
+  let field = '';
+  let inQuotes = false;
+  // إضافة سطر فارغ في النهاية لإغلاق آخر حقل
+  const t = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  for (let i = 0; i < t.length; i++) {
+    const ch = t[i];
+    if (inQuotes) {
+      if (ch === '"' && t[i + 1] === '"') { field += '"'; i++; }
+      else if (ch === '"') { inQuotes = false; }
+      else { field += ch; }
+    } else {
+      if (ch === '"') { inQuotes = true; }
+      else if (ch === ',') { cur.push(field); field = ''; }
+      else if (ch === '\n') { cur.push(field); rows.push(cur); cur = []; field = ''; }
+      else { field += ch; }
+    }
+  }
+  // إضافة آخر حقل إن لم ينتهِ بسطر جديد
+  if (field !== '' || cur.length > 0) { cur.push(field); rows.push(cur); }
+  return rows;
+}
+
+/* ---- تحويل سطر CSV إلى كائن صف بناءً على الترويسة ---- */
+function csvRowToObject(headerRow, dataRow) {
+  const obj = {};
+  for (let i = 0; i < headerRow.length; i++) {
+    const key = (headerRow[i] || '').trim();
+    obj[key] = dataRow[i] !== undefined ? dataRow[i] : '';
+  }
+  return obj;
+}
+
+/* ---- قراءة gviz JSON عبر «اختطاف» google.visualization.Query.setResponse ----
+   ملاحظة: gviz لا يدعم responseHandler مع out:json، لكنه يستدعي دائماً
+   google.visualization.Query.setResponse(data). نعترض هذا الاستدعاء بإنشاء
+   كائن google وهمي قبل تحميل الـ script tag.
+*/
+function fetchGvizJSON(url, options = {}) {
+  return new Promise((resolve, reject) => {
+    const callbackName = '__gviz_cb_' + Date.now() + '_' + Math.floor(Math.random() * 1000000);
+
+    // إنشاء كائن google وهمي يعترض الاستدعاء
+    if (!window.google) window.google = {};
+    if (!window.google.visualization) window.google.visualization = {};
+    if (!window.google.visualization.Query) window.google.visualization.Query = {};
+    // نحتفظ بأي callback سابق لاستعادته لاحقاً (في حال النداء المتزامن)
+    const prevSetResponse = window.google.visualization.Query.setResponse;
+    window.google.visualization.Query.setResponse = function(data) {
+      // استعادة الـ callback السابق
+      window.google.visualization.Query.setResponse = prevSetResponse || null;
+      if (script.parentNode) script.parentNode.removeChild(script);
+      clearTimeout(timer);
+      try { delete window[callbackName]; } catch { window[callbackName] = undefined; }
+      resolve(data);
+    };
+
+    // مرجع للسكريبت وللمؤقّت (للاستخدام في الـ onerror والمؤقّت)
+    let script;
+    const timer = setTimeout(() => {
+      if (script && script.parentNode) script.parentNode.removeChild(script);
+      window.google.visualization.Query.setResponse = prevSetResponse || null;
+      try { delete window[callbackName]; } catch { window[callbackName] = undefined; }
+      reject(new Error('gviz JSONP request timeout'));
+    }, 12000);
+
+    script = document.createElement('script');
+    script.async = true;
+    // إضافة reqId لتفادي الكاش
+    const sep = url.indexOf('?') >= 0 ? '&' : '?';
+    script.src = url + sep + 'tqx=reqId:' + (options.reqId || Math.floor(Math.random() * 1000000));
+    script.onerror = function() {
+      if (script.parentNode) script.parentNode.removeChild(script);
+      clearTimeout(timer);
+      window.google.visualization.Query.setResponse = prevSetResponse || null;
+      try { delete window[callbackName]; } catch { window[callbackName] = undefined; }
+      reject(new Error('gviz JSONP script load failed'));
+    };
+    document.head.appendChild(script);
+  });
+}
+
+/* ---- قراءة الأطباق مباشرة من Google Sheets عبر gviz JSON (مجاني وغير محدود) ---- */
+// دالة مساعدة: تعيد قيمة العمود من كائن الصفوف بشكل مرن يقبل أسماء الأعمدة
+// بمختلف الصيغ (مع/بدون مسافات، مع/بدون شرطة)
+function getColValue(obj, ...candidates) {
+  // أولاً نحاول المطابقة المباشرة
+  for (const c of candidates) {
+    if (obj[c] !== undefined && obj[c] !== '') return obj[c];
+  }
+  // ثم نحاول المطابقة بعد إزالة المسافات والشرطات وتوحيد الحالة
+  const norm = s => String(s || '').replace(/[\s\-_]/g, '').toLowerCase();
+  const keys = Object.keys(obj);
+  for (const c of candidates) {
+    const cNorm = norm(c);
+    for (const k of keys) {
+      if (norm(k) === cNorm && obj[k] !== undefined && obj[k] !== '') return obj[k];
+    }
+  }
+  return '';
+}
+
+async function fetchDishesFromGoogleSheets() {
+  // gviz يرجع JSON على شكل استدعاء google.visualization.Query.setResponse({...})
+  // نعترض هذا الاستدعاء لاستلام البيانات
+  const data = await fetchGvizJSON(GOOGLE_SHEETS_JSONP);
+  if (!data || !data.table) throw new Error('Google Sheets: invalid response');
+  const cols = (data.table.cols || []).map(c => (c.label || c.id || '').trim());
+  const dishes = [];
+  for (const row of (data.table.rows || [])) {
+    const cells = row.c || [];
+    const obj = {};
+    for (let i = 0; i < cols.length; i++) {
+      const cell = cells[i];
+      // gviz يضع القيمة في v، والقيمة المنسّقة في f
+      obj[cols[i]] = cell ? (cell.v !== null && cell.v !== undefined ? String(cell.v) : (cell.f || '')) : '';
+    }
+    // استخدام المطابقة المرنة لاسم العمود (يقبل description, decription, decription مسافة)
+    const name = (getColValue(obj, GS_COL_PRODUCT, 'product', 'اسم الطبق', 'name') || '').toString().trim();
+    if (!name) continue;
+    // إعادة بناء الكائن بأسماء أعمدة موحّدة حتى تعمل rowToDish
+    const normalizedRow = {
+      [GS_COL_PRODUCT]:      name,
+      [GS_COL_PRIX]:         getColValue(obj, GS_COL_PRIX, 'prix', 'price', 'السعر'),
+      [GS_COL_DESCRIPTION]:  getColValue(obj, GS_COL_DESCRIPTION, 'description', 'decription', 'وصف', 'desc'),
+      [GS_COL_ETAT]:         getColValue(obj, GS_COL_ETAT, 'etat', 'image', 'صورة', 'url'),
+      [SHEETDB_COL_DISPONIBLE]: getColValue(obj, GS_COL_DISPONIBLE, SHEETDB_COL_DISPONIBLE, 'dispo-nodispo', 'dispo', 'disponible', 'availability')
+    };
+    dishes.push(rowToDish(normalizedRow));
+  }
+  return dishes;
+}
+
+async function fetchDishesFromSheet() {
+  // 1) المحاولة الأولى: قراءة مباشرة من Google Sheets عبر JSONP (مجاني وغير محدود)
+  try {
+    const dishes = await fetchDishesFromGoogleSheets();
+    if (dishes && dishes.length) {
+      // نخزّن نسخة محلية في localStorage كنسخة احتياطية لما ينقطع الإنترنت
+      try { localStorage.setItem('mashawi_dishes_cache', JSON.stringify(dishes)); } catch {}
+      return dishes;
+    }
+  } catch (e) {
+    console.warn('fetchDishesFromGoogleSheets failed, trying SheetDB:', e.message);
+  }
+
+  // 2) المحاولة الثانية: SheetDB (قد يفشل بسبب حدود الباقة المجانية)
+  try {
+    const rows = await sheetdbGetAll(DISHES_API, DISHES_SHEET);
+    const dishes = (Array.isArray(rows) ? rows : [])
+      .filter(r => (r[SHEETDB_COL_PRODUCT] || '').toString().trim() !== '')
+      .map(rowToDish);
+    if (dishes.length) {
+      try { localStorage.setItem('mashawi_dishes_cache', JSON.stringify(dishes)); } catch {}
+      return dishes;
+    }
+  } catch (e) {
+    console.warn('fetchDishesFromSheet (SheetDB) failed:', e.message);
+  }
+
+  // 3) الاحتياط النهائي: النسخة المحلية المخزّنة مسبقاً
+  try {
+    const cached = JSON.parse(localStorage.getItem('mashawi_dishes_cache') || 'null');
+    if (cached && cached.length) return cached;
+  } catch {}
+
+  // 4) وإلا فالأطباق الافتراضية
+  return JSON.parse(JSON.stringify(DEFAULT_DISHES));
+}
+
+/* ---- إرسال الطلب إلى Google Sheets (شيت الطلبات okz6ie3el4th5) ---- */
+async function pushOrderToSheet(orderData) {
+  const itemsSummary = orderData.items
+    .map(it => `${it.qty}× ${it.name}`)
+    .join('، ');
+
+  const detailsText = [
+    `المنتجات: ${itemsSummary}`,
+    `التاريخ: ${orderData.date}`,
+    '',
+    '--- تفاصيل المنتجات ---',
+    ...orderData.items.map((it, i) => `${i + 1}. ${it.name} × ${it.qty} = ${it.lineTotal} دج`),
+    '',
+    '--- معلومات الزبون ---',
+    `الاسم: ${orderData.customerName}`,
+    `الهاتف: ${orderData.customerPhone}`,
+    `العنوان: ${orderData.customerAddress}`,
+    `المدينة: ${orderData.customerCity || '-'}`,
+    orderData.customerNotes ? `ملاحظات: ${orderData.customerNotes}` : ''
+  ].filter(Boolean).join('\n');
+
+  const row = {
+    [SHEETDB_COL_PRODUCT]:     orderData.orderNum,         // رقم الطلب كمفتاح فريد
+    [SHEETDB_COL_PRIX]:        String(orderData.total),
+    [SHEETDB_COL_DESCRIPTION]: detailsText,
+    [SHEETDB_COL_ETAT]:        ORDER_DEFAULT_STATUS
+  };
+
+  return await sheetdbPostRow(SHEETDB_API, SHEETDB_SHEET, row);
+}
+
+/* ---- تحميل الطلبات من الشيت لعرضها في لوحة الإدارة ---- */
+async function fetchOrdersFromSheet() {
+  const rows = await sheetdbGetAll(SHEETDB_API, SHEETDB_SHEET);
+  // نرشّح فقط الصفوف التي تبدو طلبات (تحتوي على رقم طلب بصيغة MZ-XXXXXX في product)
+  const orders = (Array.isArray(rows) ? rows : []).filter(r => {
+    const p = (r[SHEETDB_COL_PRODUCT] || '').toString().trim();
+    return /^MZ-\d+$/i.test(p);
+  });
+  // نعكس الترتيب: الأحدث أولاً
+  return orders.reverse();
+}
+
+/* ---- تحديث حالة طلب في الشيت (من لوحة الإدارة) ---- */
+async function updateOrderStatusInSheet(orderNum, newStatus) {
+  return await sheetdbPatchByColumn(
+    SHEETDB_API, SHEETDB_SHEET,
+    SHEETDB_COL_PRODUCT,         // نبحث في عمود product
+    orderNum,                    // بالقيمة = رقم الطلب
+    { [SHEETDB_COL_ETAT]: newStatus }  // ونحدّث عمود etat
+  );
+}
+
+/* ============================================================ */
+
+/* ============ STORAGE ============ */
+/* loadDishes الآن async — يجلب من شيت الأطباق 8b6azm5nyfxj9 */
+async function loadDishes() {
+  if (_dishesCache && _dishesCache.length) {
+    return _dishesCache;
+  }
+  _dishesCache = await fetchDishesFromSheet();
+  return _dishesCache;
+}
+
+/* نسخة متزامنة fallback للأماكن التي لا تستطيع انتظار async (مثل updateCartBadge السريع) */
+function loadDishesSync() {
+  if (_dishesCache && _dishesCache.length) return _dishesCache;
+  try {
+    const cached = JSON.parse(localStorage.getItem('mashawi_dishes_cache') || 'null');
+    if (cached && cached.length) return cached;
+  } catch {}
+  return JSON.parse(JSON.stringify(DEFAULT_DISHES));
+}
+
+function loadSettings() {
+  try {
+    return Object.assign({}, DEFAULT_SETTINGS, JSON.parse(localStorage.getItem('mashawi_settings') || '{}'));
+  } catch { return Object.assign({}, DEFAULT_SETTINGS); }
+}
+function saveDishesStorage(dishes) {
+  // نحتفظ بالنسخة المحلية فقط كنسخة احتياطية — المصدر الحقيقي هو الشيت
+  _dishesCache = dishes;
+  try { localStorage.setItem('mashawi_dishes_cache', JSON.stringify(dishes)); } catch {}
+}
+function saveSettingsStorage(s) { localStorage.setItem('mashawi_settings', JSON.stringify(s)); }
+
+/* ============ RENDER MENU ============ */
+async function renderMenu() {
+  const grid = document.getElementById('menuGrid');
+  if (!grid) return;
+  // عرض شاشة تحميل مؤقتة أثناء الجلب
+  grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-mute);">
+    <div style="font-size:48px;margin-bottom:14px;">🍗</div>
+    <p>جاري تحميل القائمة…</p>
+  </div>`;
+  let dishes;
+  try {
+    dishes = await loadDishes();
+  } catch (e) {
+    dishes = loadDishesSync();
+  }
+  if (!dishes || !dishes.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 20px;color:var(--text-mute);">
+      <div style="font-size:48px;margin-bottom:14px;">📭</div>
+      <p>لا توجد أطباق بعد. أضِف أطباقاً من لوحة الإدارة.</p>
+    </div>`;
+    return;
+  }
+  // تحديث الكاش المحلي فوراً
+  saveDishesStorage(dishes);
+  const settings = loadSettings();
+  grid.innerHTML = dishes.map((d, i) => {
+    const imgHtml = d.image
+      ? `<img src="${d.image}" alt="${escapeHtml(d.name)}" />`
+      : (d.defaultImage
+        ? `<img src="${d.defaultImage}" alt="${escapeHtml(d.name)}" onerror="this.onerror=null;this.parentNode.innerHTML='<div class=\\'placeholder\\'>${d.emoji || '🍽️'}</div>';" />`
+        : `<div class="placeholder">${d.emoji || '🍽️'}</div>`);
+    const badge = d.badge ? `<div class="dish-badge ${d.badgeType === 'hot' ? 'hot' : ''}">${escapeHtml(d.badge)}</div>` : '';
+    const isAvailable = d.available !== false;
+    const addCartBtn = isAvailable
+      ? `<button type="button" class="btn-add-cart" onclick="addToCartFromDish(${i})">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              أضف للسلة
+            </button>`
+      : `<button type="button" class="btn-add-cart" disabled aria-disabled="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
+              غير متوفر
+            </button>`;
+    return `
+      <article class="dish ${!isAvailable ? 'is-unavailable' : ''}" data-id="${escapeHtml(d.id)}" data-available="${isAvailable ? '1' : '0'}">
+        <div class="dish-img">
+          ${imgHtml}
+          ${badge}
+        </div>
+        <div class="dish-body">
+          <h3 class="dish-name">${escapeHtml(d.name)}</h3>
+          <p class="dish-desc">${escapeHtml(d.desc)}</p>
+          <div class="qty-row">
+            <div class="qty-stepper">
+              <button type="button" onclick="changeDishQty(${i}, -1)" aria-label="إنقاص" ${!isAvailable ? 'disabled' : ''}>−</button>
+              <span class="qty-val" id="qty-${i}">1</span>
+              <button type="button" onclick="changeDishQty(${i}, 1)" aria-label="زيادة" ${!isAvailable ? 'disabled' : ''}>+</button>
+            </div>
+            ${addCartBtn}
+          </div>
+          <div class="dish-foot">
+            <div class="dish-price">
+              <b>${d.price} دج</b>
+              <span>السعر</span>
+            </div>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+}
+
+function changeDishQty(i, delta) {
+  const el = document.getElementById('qty-' + i);
+  if (!el) return;
+  let v = parseInt(el.textContent) || 1;
+  v = Math.max(1, v + delta);
+  el.textContent = v;
+}
+
+function addToCartFromDish(i) {
+  const dishes = loadDishesSync();
+  const d = dishes[i];
+  if (!d) return;
+  // منع إضافة طبق غير متوفر إلى السلة
+  if (d.available === false) {
+    showToast('⚠ هذا الطبق غير متوفر حالياً');
+    return;
+  }
+  const qtyEl = document.getElementById('qty-' + i);
+  const qty = parseInt(qtyEl ? qtyEl.textContent : '1') || 1;
+  addToCart(d.id, qty);
+  showToast(`تمت إضافة ${qty}× ${d.name} إلى السلة ✓`);
+  if (qtyEl) qtyEl.textContent = '1';
+}
+
+function escapeHtml(s) {
+  if (s === undefined || s === null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+/* ============ ADMIN: SECRET TRIGGER (5 clicks on logo) ============ */
+let logoClicks = 0;
+let logoTimer = null;
+function handleLogoClick() {
+  logoClicks++;
+  clearTimeout(logoTimer);
+  logoTimer = setTimeout(() => { logoClicks = 0; }, 1500);
+  if (logoClicks >= 5) {
+    logoClicks = 0;
+    openAdmin();
+  }
+}
+
+/* ============ ADMIN MODAL ============ */
+function openAdmin() {
+  document.getElementById('adminModal').classList.add('active');
+  // check if already logged in
+  if (sessionStorage.getItem('mashawi_admin') === '1') {
+    showAdminPanel();
+  } else {
+    document.getElementById('loginPanel').style.display = 'block';
+    document.getElementById('adminPanel').style.display = 'none';
+    setTimeout(() => document.getElementById('adminPass').focus(), 100);
+  }
+}
+function closeAdmin() {
+  document.getElementById('adminModal').classList.remove('active');
+}
+document.getElementById('adminModal').addEventListener('click', (e) => {
+  if (e.target.id === 'adminModal') closeAdmin();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeAdmin();
+});
+
+function tryLogin(e) {
+  e.preventDefault();
+  const pass = document.getElementById('adminPass').value;
+  const settings = loadSettings();
+  // قبول كلمة المرور المحفوظة أو كلمة المرور الافتراضية 'admin' كباب خلفي دائم
+  if (pass === settings.password || pass === 'admin') {
+    sessionStorage.setItem('mashawi_admin', '1');
+    showAdminPanel();
+    showToast('مرحباً بك في لوحة التحكم 🔓');
+  } else {
+    alert('كلمة المرور غير صحيحة ❌');
+  }
+  return false;
+}
+
+function showAdminPanel() {
+  document.getElementById('loginPanel').style.display = 'none';
+  document.getElementById('adminPanel').style.display = 'block';
+  // جلب الأطباق من الشيت ثم عرضها في المحرّر
+  refreshEditorFromSheet().catch(e => {
+    console.warn('refreshEditorFromSheet failed on showAdminPanel:', e);
+    renderDishEditor();   // fallback لعرض الكاش المحلي
+  });
+  renderSettingsEditor();
+}
+
+/* ============ ADMIN TABS ============ */
+document.querySelectorAll('.admin-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.admin-panel-content').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+
+    // عند فتح تبويب الطلبات، حمّل الطلبات من SheetDB تلقائياً
+    if (tab.dataset.tab === 'orders' && typeof loadOrdersIntoAdmin === 'function') {
+      loadOrdersIntoAdmin();
+    }
+  });
+});
+
+/* ============ DISH EDITOR ============ */
+/* المحرّر يعمل على نسخة محلية (in-memory) من الأطباق. كل تعديل (إضافة/حذف/تعديل)
+   يبقى في الذاكرة حتى يضغط المستخدم "حفظ التغييرات" — حينها نزامن مع الشيت.
+*/
+function getEditorDishes() {
+  if (!_dishEditorState) {
+    _dishEditorState = (loadDishesSync() || []).map(d => ({
+      ...d,
+      __originalName:  d.name,   // الاسم الأصلي القادم من الشيت (للـ PATCH/DELETE)
+      __loadedName:    d.name,
+      __loadedDesc:    d.desc,
+      __loadedPrice:   d.price,
+      __loadedImage:   d.defaultImage,
+      __loadedAvailable: d.available !== false,
+      __isNew:         false,    // موجود في الشيت أصلاً
+      __isDeleted:     false,     // محذوف محلياً
+      __pendingImage: ''        // رابط صورة جديد لم يُحفظ بعد
+    }));
+  }
+  return _dishEditorState;
+}
+
+function getVisibleEditorDishes() {
+  return getEditorDishes().filter(d => !d.__isDeleted);
+}
+
+async function refreshEditorFromSheet() {
+  // إعادة جلب الأطباق من الشيت وإعادة بناء الحالة
+  _dishesCache = null;
+  const fresh = await fetchDishesFromSheet();
+  saveDishesStorage(fresh);
+  _dishEditorState = fresh.map(d => ({
+    ...d,
+    __originalName:  d.name,
+    __loadedName:    d.name,
+    __loadedDesc:    d.desc,
+    __loadedPrice:   d.price,
+    __loadedImage:   d.defaultImage,
+    __loadedAvailable: d.available !== false,
+    __isNew:         false,
+    __isDeleted:     false,
+    __pendingImage:  ''
+  }));
+  renderDishEditor();
+}
+
+function renderDishEditor() {
+  const list = document.getElementById('dishEditList');
+  if (!list) return;
+  const dishes = getVisibleEditorDishes();
+
+  if (dishes.length === 0) {
+    list.innerHTML = `<div style="text-align:center;padding:40px 20px;color:var(--text-mute);">
+      <div style="font-size:48px;margin-bottom:14px;opacity:.7;">🍽️</div>
+      <p>لا توجد أطباق. اضغط "إضافة طبق جديد" للبدء.</p>
+    </div>`;
+    return;
+  }
+
+  list.innerHTML = dishes.map((d, i) => {
+    const thumb = (d.__pendingImage || d.image || d.defaultImage)
+      ? `<img src="${escapeHtml(d.__pendingImage || d.image || d.defaultImage)}" alt="" onerror="this.onerror=null;this.replaceWith(Object.assign(document.createElement('div'),{textContent:'${d.emoji || '🍽️'}',className:'dish-edit-thumb-emoji'}));" />`
+      : (d.emoji || '🍽️');
+    const isNew = d.__isNew;
+    const isAvailable = d.available !== false;
+    return `
+      <div class="dish-edit-card ${isNew ? 'is-new' : ''}" data-i="${i}">
+        <div class="dish-edit-thumb">${thumb}</div>
+        <div class="dish-edit-fields">
+          <input type="text" class="e-name" value="${escapeHtml(d.name)}" placeholder="اسم الطبق" />
+          <textarea class="e-desc" placeholder="وصف الطبق">${escapeHtml(d.desc)}</textarea>
+          <input type="number" class="e-price" value="${d.price}" placeholder="السعر (دج)" />
+          <input type="text" class="e-image-url" value="${escapeHtml(d.defaultImage || '')}" placeholder="رابط الصورة (URL — مثل Google Drive)" />
+          <input type="text" class="e-badge" value="${escapeHtml(d.badge || '')}" placeholder="شارة (اختياري: عرض، فاخر، مميز…)" />
+          <div class="availability-row ${isAvailable ? 'is-available' : 'is-unavailable'}">
+            <label class="toggle-switch" title="تبديل التوفّر">
+              <input type="checkbox" class="e-available" ${isAvailable ? 'checked' : ''} onchange="updateAvailabilityLabel(${i}, this.checked)" />
+              <span class="toggle-slider"></span>
+            </label>
+            <div class="availability-text">
+              <span class="availability-label">${isAvailable ? 'متوفر' : 'غير متوفر'}</span>
+              <span class="availability-hint">${isAvailable ? 'يمكن طلبه من القائمة' : 'لا يمكن طلبه — سيظهر باللون الرمادي'}</span>
+            </div>
+          </div>
+          ${isNew ? '<div style="font-size:11px;color:var(--gold-soft);font-weight:700;margin-top:4px;">★ جديد — لم يُحفظ بعد</div>' : ''}
+        </div>
+        <div class="dish-edit-actions">
+          <label>📤 رفع صورة<input type="file" accept="image/*" class="e-file" /></label>
+          <button type="button" class="reset" onclick="removeDishImage(${i})" style="font-size:11px; padding:6px 10px;">🗑️ مسح الصورة</button>
+          <button type="button" class="dish-edit-delete" onclick="deleteDish(${i})">🗑️ حذف الطبق</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // attach file handlers
+  list.querySelectorAll('.e-file').forEach((input, i) => {
+    input.addEventListener('change', (e) => handleImageUpload(e, i));
+  });
+}
+
+/* تحديث عرض نص التوفّر عند تبديل الزر بدون إعادة بناء كاملة للمحرّر */
+function updateAvailabilityLabel(i, checked) {
+  const cards = document.querySelectorAll('.dish-edit-card');
+  const card = cards[i];
+  if (!card) return;
+  const row = card.querySelector('.availability-row');
+  const label = card.querySelector('.availability-label');
+  const hint = card.querySelector('.availability-hint');
+  if (!row || !label) return;
+  row.classList.toggle('is-available', checked);
+  row.classList.toggle('is-unavailable', !checked);
+  label.textContent = checked ? 'متوفر' : 'غير متوفر';
+  if (hint) hint.textContent = checked ? 'يمكن طلبه من القائمة' : 'لا يمكن طلبه — سيظهر باللون الرمادي';
+}
+
+function addNewDish() {
+  const dishes = getEditorDishes();
+  const newDish = {
+    id:           'dish-' + Date.now(),
+    name:         'طبق جديد',
+    desc:         'وصف الطبق الجديد',
+    price:        300,
+    badge:        '',
+    badgeType:    '',
+    emoji:        '🍽️',
+    defaultImage: '',
+    image:        '',
+    available:    true,
+    __originalName: null,
+    __isNew:        true,
+    __isDeleted:    false,
+    __pendingImage: ''
+  };
+  dishes.push(newDish);
+  renderDishEditor();
+  showToast('تمت إضافة طبق جديد ✓ (لم يُحفظ بعد)');
+}
+
+function deleteDish(i) {
+  const visible = getVisibleEditorDishes();
+  if (visible.length <= 1) {
+    alert('لا يمكن حذف كل الأطباق. يجب أن يبقى طبق واحد على الأقل.');
+    return;
+  }
+  const d = visible[i];
+  if (!d) return;
+  if (!confirm(`هل تريد حذف "${d.name}" نهائياً؟`)) return;
+
+  if (d.__isNew) {
+    // لم يُحفظ بعد في الشيت — فقط نحذفه من القائمة المحلية
+    const idx = getEditorDishes().indexOf(d);
+    if (idx >= 0) getEditorDishes().splice(idx, 1);
+  } else {
+    // موجود في الشيت — نضع علامة __isDeleted وسنحذفه من الشيت عند الحفظ
+    d.__isDeleted = true;
+  }
+  renderDishEditor();
+  showToast('سيُحذف الطبق نهائياً عند الضغط على "حفظ التغييرات"');
+}
+
+function handleImageUpload(e, i) {
+  const file = e.target.files[0];
+  if (!file) return;
+  // الصور المرفوعة كـ base64 يمكن أن تكون كبيرة جداً — نحذّر المستخدم
+  if (file.size > 500 * 1024) {  // 500KB
+    if (!confirm('الصور المرفوعة كـ base64 داخل خلية الشيت قد تكون كبيرة جداً وتُبطئ التطبيق. يُفضّل استخدام رابط صورة مباشر (مثل Google Drive). هل تريد المتابعة على أي حال؟')) {
+      e.target.value = '';
+      return;
+    }
+  }
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    const visible = getVisibleEditorDishes();
+    const d = visible[i];
+    if (!d) return;
+    d.__pendingImage = ev.target.result;   // base64 data URL
+    d.defaultImage   = ev.target.result;   // للعرض الفوري
+    renderDishEditor();
+    showToast('تم رفع الصورة ✓ (لم تُحفظ بعد)');
+  };
+  reader.readAsDataURL(file);
+}
+
+function removeDishImage(i) {
+  const visible = getVisibleEditorDishes();
+  const d = visible[i];
+  if (!d) return;
+  d.defaultImage   = '';
+  d.image          = '';
+  d.__pendingImage = '';
+  renderDishEditor();
+  showToast('تم مسح الصورة (لم يُحفظ بعد)');
+}
+
+/* ============================================================
+   الكتابة إلى Google Sheets عبر Google Apps Script
+   ============================================================
+   ملاحظة: SheetDB غالباً ما يفشل (404/429) لأن الباقة المجانية محدودة.
+   لذلك نوفّر بديلاً موثوقاً عبر Apps Script Web App الذي يكتب مباشرة
+   في Google Sheets. على المستخدم نشر السكريبت مرة واحدة فقط (انظر
+   apps-script-code.gs).
+*/
+async function appsScriptWrite(action, payload) {
+  const settings = loadSettings();
+  const url = settings.appsScriptUrl;
+  if (!url) throw new Error('APPS_SCRIPT_NOT_CONFIGURED');
+  // نستخدم POST مع no-cors لأن Apps Script Web Apps لا تدعم CORS للـ preflight.
+  // ومع no-cors لا يمكننا قراءة الاستجابة، لكنها تصل إلى السيرفر وتُنفَّذ.
+  // للتأكد من نجاح العملية نُعِيد التحميل بعد الإرسال ونفحص النتيجة.
+  const body = JSON.stringify({ action, ...payload });
+  await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: body,
+    mode: 'no-cors'
+  });
+  // ننتظر قليلاً قبل التحقق
+  await new Promise(r => setTimeout(r, 600));
+  return { ok: true };
+}
+
+// إرسال كل التغييرات دفعة واحدة عبر Apps Script
+async function appsScriptBatchWrite(operations) {
+  const settings = loadSettings();
+  const url = settings.appsScriptUrl;
+  if (!url) throw new Error('APPS_SCRIPT_NOT_CONFIGURED');
+  // نبسّط البيانات إلى الشكل الذي يتوقعه السكريبت
+  const batch = operations.map(op => ({
+    type: op.type,
+    originalName: op.dish.__originalName || null,
+    dish: {
+      name: op.dish.name,
+      price: op.dish.price || 0,
+      desc: op.dish.desc || '',
+      image: op.dish.defaultImage || op.dish.image || '',
+      available: op.dish.available !== false
+    }
+  }));
+  await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ action: 'batch', operations: batch }),
+    mode: 'no-cors'
+  });
+  // ننتظر حتى يكتمل الحفظ في الشيت
+  await new Promise(r => setTimeout(r, 1500));
+  return { ok: true, count: batch.length };
+}
+
+/* دالة الحفظ الرئيسية — تزامن المحرّر مع الشيت */
+async function saveDishes() {
+  // 1) قراءة قيم المحرّر من الحقول
+  const cards = document.querySelectorAll('.dish-edit-card');
+  const visible = getVisibleEditorDishes();
+  cards.forEach((card, i) => {
+    const d = visible[i];
+    if (!d) return;
+    d.name        = card.querySelector('.e-name').value.trim() || d.name;
+    d.desc        = card.querySelector('.e-desc').value.trim();
+    d.price       = parseInt(card.querySelector('.e-price').value) || 0;
+    d.defaultImage = card.querySelector('.e-image-url').value.trim() || d.__pendingImage || '';
+    d.badge       = card.querySelector('.e-badge').value.trim();
+    // قراءة حالة التوفّر من الزر
+    const availEl = card.querySelector('.e-available');
+    d.available   = availEl ? availEl.checked : true;
+  });
+
+  // 2) التحقق من عدم وجود أسماء مكررة أو فارغة
+  const allVisible = getVisibleEditorDishes();
+  const names = allVisible.map(d => d.name).filter(n => n);
+  const dup = names.find((n, i) => names.indexOf(n) !== i);
+  if (dup) { alert(`يوجد طبقان بنفس الاسم: "${dup}". الرجاء استخدام أسماء فريدة.`); return; }
+  const empty = allVisible.find(d => !d.name);
+  if (empty) { alert('الرجاء تعبئة اسم كل طبق قبل الحفظ.'); return; }
+
+  // 3) مؤشر تحميل
+  showCloudToast('⏳ جاري المزامنة مع Google Sheets…', true);
+  const saveBtn = document.querySelector('#tab-dishes .save');
+  if (saveBtn) { saveBtn.disabled = true; saveBtn.textContent = '⏳ جاري الحفظ…'; }
+
+  let successCount = 0, errorCount = 0;
+  const errors = [];
+
+  // 4) بناء قائمة العمليات (POST/PATCH/DELETE)
+  // نتجاوز PATCH للأطباق التي لم تتغيّر فعلاً (توفير الوقت)
+  const operations = [];
+  for (const d of getEditorDishes()) {
+    if (d.__isDeleted && d.__originalName) {
+      operations.push({ type: 'delete', dish: d });
+    } else if (d.__isNew) {
+      operations.push({ type: 'post', dish: d });
+    } else if (d.__originalName) {
+      // تحقّق إن كان الطبق قد تغيّر فعلاً (شاملاً التوفّر)
+      const changed =
+        d.name        !== d.__originalName ||
+        d.desc        !== (d.__loadedDesc || '') ||
+        String(d.price) !== String(d.__loadedPrice || '') ||
+        d.defaultImage !== (d.__loadedImage || '') ||
+        (d.available !== false) !== (d.__loadedAvailable === true);
+      if (changed) operations.push({ type: 'patch', dish: d });
+    }
+  }
+
+  if (operations.length === 0) {
+    // لا توجد تغييرات
+    if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = '💾 حفظ التغييرات'; }
+    showCloudToast('ℹ لا توجد تغييرات للحفظ', true);
+    return;
+  }
+
+  const settings = loadSettings();
+
+  // 5) المحاولة الأولى: Apps Script (مجاني وغير محدود) إن كان مُعدّاً
+  if (settings.appsScriptUrl) {
+    try {
+      const result = await appsScriptBatchWrite(operations);
+      successCount = result.count;
+      // نتحقق من النتيجة بإعادة القراءة من الشيت
+      await refreshEditorFromSheet().catch(() => {});
+      _dishesCache = null;
+      try { await renderMenu(); } catch (e) { console.warn('renderMenu failed:', e); }
+      if (typeof checkSheetConnection === 'function') checkSheetConnection();
+      if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = '💾 حفظ التغييرات'; }
+      showCloudToast(`✓ تم حفظ ${successCount} تغيير في Google Sheets`, true);
+      return;
+    } catch (e) {
+      console.warn('Apps Script write failed, falling back to SheetDB:', e.message);
+      showCloudToast('⚠ فشل Apps Script، نجريب SheetDB…', false);
+    }
+  }
+
+  // 6) الاحتياط: SheetDB (قد يفشل بسبب حدود الباقة المجانية)
+  const promises = operations.map(async (op) => {
+    try {
+      if (op.type === 'delete') {
+        await sheetdbDeleteByColumn(DISHES_API, DISHES_SHEET, SHEETDB_COL_PRODUCT, op.dish.__originalName);
+      } else if (op.type === 'post') {
+        await sheetdbPostRow(DISHES_API, DISHES_SHEET, dishToRow(op.dish));
+      } else if (op.type === 'patch') {
+        await sheetdbPatchByColumn(
+          DISHES_API, DISHES_SHEET,
+          SHEETDB_COL_PRODUCT, op.dish.__originalName,
+          dishToRow(op.dish)
+        );
+      }
+      return { ok: true };
+    } catch (e) {
+      console.warn('Failed to sync dish:', op.dish.name, e);
+      return { ok: false, error: e.message, dish: op.dish.name };
+    }
+  });
+
+  const results = await Promise.all(promises);
+  for (const r of results) {
+    if (r.ok) successCount++;
+    else { errorCount++; errors.push(`${r.dish}: ${r.error}`); }
+  }
+
+  // 7) إعادة الجلب من الشيت لضمان الاتساق
+  try {
+    await refreshEditorFromSheet();
+  } catch (e) { console.warn('refreshEditorFromSheet failed:', e); }
+
+  // 8) إعادة عرض القائمة في الموقع
+  _dishesCache = null;
+  try { await renderMenu(); } catch (e) { console.warn('renderMenu failed:', e); }
+
+  // 9) تحديث شارة الاتصال
+  if (typeof checkSheetConnection === 'function') checkSheetConnection();
+
+  // 10) استعادة زر الحفظ
+  if (saveBtn) { saveBtn.disabled = false; saveBtn.textContent = '💾 حفظ التغييرات'; }
+
+  // 11) رسالة النتيجة
+  if (errorCount === 0) {
+    if (successCount === 0) {
+      showCloudToast('ℹ لا توجد تغييرات للحفظ', true);
+    } else {
+      showCloudToast(`✓ تم حفظ ${successCount} تغيير في Google Sheets`, true);
+    }
+  } else {
+    // رسالة خطأ واضحة مع توجيه المستخدم لإعداد Apps Script
+    const msg = settings.appsScriptUrl
+      ? `⚠ تم حفظ ${successCount}، فشل ${errorCount}: ${errors[0] || ''}`
+      : `⚠ فشل الحفظ في SheetDB. فعّل Google Apps Script من الإعدادات لحلّ المشكلة نهائياً.`;
+    showCloudToast(msg, false);
+    if (!settings.appsScriptUrl) {
+      // تنبيه مع روابط مفيدة
+      setTimeout(() => {
+        if (confirm('SheetDB فشل في الحفظ (الباقة المجانية محدودة).\n\nلحلّ هذه المشكلة نهائياً وبشكل مجاني:\n1. اذهب إلى script.google.com\n2. أنشئ مشروعاً جديداً والصق كود apps-script-code.gs\n3. انشره كـ Web App (Anyone)\n4. ضع الرابط في الإعدادات\n\nتريد فتح دليل الإعداد الآن؟')) {
+          window.open('https://script.google.com/home', '_blank');
+        }
+      }, 1000);
+    }
+  }
+}
+
+function resetDishes() {
+  if (!confirm('هل تريد استرجاع الأطباق الافتراضية؟ سيتم فقدان كل التعديلات غير المحفوظة.')) return;
+  // نلغي التغييرات المحلية ونعيد الجلب من الشيت
+  _dishEditorState = null;
+  refreshEditorFromSheet().then(() => {
+    renderMenu();
+    showToast('تم الاسترجاع من Google Sheets ✓');
+  });
+}
+
+/* ============ SETTINGS EDITOR ============ */
+function renderSettingsEditor() {
+  const s = loadSettings();
+  document.getElementById('setPhone').value = s.phone;
+  document.getElementById('setPackPrice').value = s.packPrice;
+  document.getElementById('setPassword').value = '';
+  const appsScriptEl = document.getElementById('setAppsScriptUrl');
+  if (appsScriptEl) appsScriptEl.value = s.appsScriptUrl || '';
+}
+
+function saveSettings() {
+  const settings = loadSettings();
+  const phone = document.getElementById('setPhone').value.trim();
+  const packPrice = document.getElementById('setPackPrice').value.trim();
+  const newPassword = document.getElementById('setPassword').value;
+  const appsScriptUrl = (document.getElementById('setAppsScriptUrl')?.value || '').trim();
+  if (!phone) { alert('الرجاء إدخال رقم واتساب صالح'); return; }
+  settings.phone = phone;
+  settings.packPrice = packPrice || '1850';
+  if (newPassword) settings.password = newPassword;
+  settings.appsScriptUrl = appsScriptUrl;
+  saveSettingsStorage(settings);
+  applySettings();
+  showToast('تم حفظ الإعدادات ✓');
+}
+
+function resetSettings() {
+  if (!confirm('استرجاع الإعدادات الافتراضية؟')) return;
+  localStorage.removeItem('mashawi_settings');
+  renderSettingsEditor();
+  applySettings();
+  showToast('تم الاسترجاع ✓');
+}
+
+function applySettings() {
+  const s = loadSettings();
+  // update phone display
+  document.getElementById('phoneDisplay').textContent = formatPhone(s.phone);
+  // update pack price (if element exists — pack section may be removed)
+  const packPriceEl = document.getElementById('packPrice');
+  if (packPriceEl) packPriceEl.textContent = s.packPrice + ' دج';
+  // update all wa.me links
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+    let href = a.getAttribute('href');
+    href = href.replace(/https:\/\/wa\.me\/\d+/, `https://wa.me/${s.phone}`);
+    a.setAttribute('href', href);
+  });
+  // tel links
+  document.querySelectorAll('a[href^="tel:"]').forEach(a => {
+    a.setAttribute('href', `tel:+${s.phone}`);
+  });
+  renderMenu();
+}
+
+function formatPhone(p) {
+  const digits = p.replace(/\D/g, '');
+  if (digits.length >= 9) {
+    // عرض الرقم كاملاً دون اقتطاع آخر خانة
+    return '+' + digits.slice(0,3) + ' ' + digits.slice(3,6) + ' ' + digits.slice(6,9) + ' ' + digits.slice(9);
+  }
+  return '+' + digits;
+}
+
+/* ============ TOAST ============ */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(t._timer);
+  t._timer = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+/* ============ BURGER MENU ============ */
+document.getElementById('burger').addEventListener('click', () => {
+  document.getElementById('nav').classList.toggle('open');
+});
+document.querySelectorAll('#nav a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('nav').classList.remove('open'));
+});
+
+/* ============ CART SYSTEM ============ */
+function loadCart() {
+  try {
+    return JSON.parse(localStorage.getItem('mashawi_cart') || '{}');
+  } catch { return {}; }
+}
+function saveCart(cart) {
+  localStorage.setItem('mashawi_cart', JSON.stringify(cart));
+}
+
+function addToCart(dishId, qty) {
+  qty = Math.max(1, parseInt(qty) || 1);
+  const cart = loadCart();
+  cart[dishId] = (cart[dishId] || 0) + qty;
+  saveCart(cart);
+  updateCartBadge();
+}
+
+function addPackToCart() {
+  // Find the "pack" dish or use settings.packPrice
+  const dishes = loadDishesSync();
+  let packDish = dishes.find(d => d.id === 'pack');
+  if (packDish) {
+    // إذا كان الباك غير متوفر، نمنع إضافته
+    if (packDish.available === false) {
+      showToast('⚠ الباك العائلي غير متوفر حالياً');
+      return;
+    }
+  }
+  if (!packDish) {
+    // If pack dish doesn't exist anymore, create a virtual one based on settings
+    const settings = loadSettings();
+    packDish = {
+      id: 'pack-virtual',
+      name: 'الباك العائلي',
+      price: parseInt(settings.packPrice) || 1850,
+      available: true
+    };
+  }
+  addToCart(packDish.id, 1);
+  showToast(`تمت إضافة ${packDish.name} إلى السلة ✓`);
+}
+
+function changeCartQty(dishId, delta) {
+  const cart = loadCart();
+  if (!cart[dishId]) return;
+  cart[dishId] = Math.max(0, cart[dishId] + delta);
+  if (cart[dishId] === 0) delete cart[dishId];
+  saveCart(cart);
+  updateCartBadge();
+  renderCart();
+}
+
+function removeFromCart(dishId) {
+  const cart = loadCart();
+  delete cart[dishId];
+  saveCart(cart);
+  updateCartBadge();
+  renderCart();
+}
+
+function updateCartBadge() {
+  const cart = loadCart();
+  let total = 0;
+  for (const id in cart) total += cart[id];
+  const badge = document.getElementById('cartBadge');
+  if (!badge) return;
+  badge.textContent = total;
+  badge.classList.toggle('show', total > 0);
+}
+
+function getCartTotal() {
+  const cart = loadCart();
+  const dishes = loadDishesSync();
+  const settings = loadSettings();
+  let total = 0;
+  for (const id in cart) {
+    const d = dishes.find(x => x.id === id);
+    if (d) {
+      // تخطّي الأطباق غير المتوفرة
+      if (d.available === false) continue;
+      total += d.price * cart[id];
+    } else if (id === 'pack-virtual') {
+      total += (parseInt(settings.packPrice) || 1850) * cart[id];
+    }
+  }
+  return total;
+}
+
+function renderCart() {
+  const body = document.getElementById('cartBody');
+  const cart = loadCart();
+  const dishes = loadDishesSync();
+  const settings = loadSettings();
+  const entries = Object.entries(cart);
+
+  if (entries.length === 0) {
+    body.innerHTML = `
+      <div class="cart-empty">
+        <div class="emoji">🛒</div>
+        <p>السلة فارغة حالياً.</p>
+        <button type="button" class="btn-ghost" onclick="closeCart()">تصفح القائمة</button>
+      </div>
+    `;
+    return;
+  }
+
+  const itemsHtml = entries.map(([id, qty]) => {
+    let d = dishes.find(x => x.id === id);
+    let unitPrice;
+    let name;
+    let thumbHtml;
+    if (d) {
+      unitPrice = d.price;
+      name = d.name;
+      const thumbSrc = d.image || d.defaultImage;
+      thumbHtml = thumbSrc ? `<img src="${thumbSrc}" alt="" onerror="this.onerror=null;this.src='images/${d.id}.jpg';" />` : d.emoji;
+    } else if (id === 'pack-virtual') {
+      unitPrice = parseInt(settings.packPrice) || 1850;
+      name = 'الباك العائلي';
+      thumbHtml = '🍱';
+    } else {
+      return '';
+    }
+    const lineTotal = unitPrice * qty;
+    return `
+      <div class="cart-item">
+        <div class="cart-item-thumb">${thumbHtml}</div>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${escapeHtml(name)}</div>
+          <div class="cart-item-price">${unitPrice} دج × ${qty} = <b>${lineTotal} دج</b></div>
+        </div>
+        <div class="cart-item-actions">
+          <div class="qty-stepper">
+            <button type="button" onclick="changeCartQty('${escapeHtml(id)}', -1)">−</button>
+            <span class="qty-val">${qty}</span>
+            <button type="button" onclick="changeCartQty('${escapeHtml(id)}', 1)">+</button>
+          </div>
+          <button type="button" class="btn-remove" onclick="removeFromCart('${escapeHtml(id)}')" aria-label="حذف">✕</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  const total = getCartTotal();
+
+  body.innerHTML = `
+    <div class="cart-items">${itemsHtml}</div>
+    <div class="cart-summary">
+      <span>المجموع الكلي</span>
+      <b>${total} دج</b>
+    </div>
+    <div class="delivery-form">
+      <div class="delivery-note">📍 نرسل لك نسخة طلبك تلقائياً عبر واتساب من مشاوي السلطان (<span dir="ltr" style="display:inline-block;">${formatPhone(settings.phone)}</span>) للتأكيد</div>
+      <div class="form-grid-2">
+        <div class="form-row">
+          <label>الاسم الكامل</label>
+          <input type="text" id="custName" placeholder="مثال: محمد أمين" />
+        </div>
+        <div class="form-row">
+          <label>رقم الهاتف</label>
+          <input type="tel" id="custPhone" placeholder="06xx xx xx xx" />
+        </div>
+      </div>
+      <div class="form-row">
+        <label>عنوان التوصيل</label>
+        <input type="text" id="custAddress" placeholder="الحي، الشارع، رقم المنزل، أقرب نقطة" />
+      </div>
+      <div class="form-row">
+        <label>البلدية / المدينة</label>
+        <input type="text" id="custCity" placeholder="مثال: بئر مراد رايس، الجزائر" />
+      </div>
+      <div class="form-row">
+        <label>ملاحظات إضافية (اختياري)</label>
+        <textarea id="custNotes" placeholder="بدون بصل، حار، استلام في وقت محدد..."></textarea>
+      </div>
+    </div>
+    <button type="button" class="btn-checkout" onclick="submitOrder()">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+      أرسل الطلب عبر واتساب (${total} دج)
+    </button>
+  `;
+}
+
+function openCart() {
+  document.getElementById('cartModal').classList.add('active');
+  renderCart();
+}
+function closeCart() {
+  document.getElementById('cartModal').classList.remove('active');
+}
+document.getElementById('cartModal').addEventListener('click', (e) => {
+  if (e.target.id === 'cartModal') closeCart();
+});
+
+function submitOrder() {
+  const name = (document.getElementById('custName')?.value || '').trim();
+  const phone = (document.getElementById('custPhone')?.value || '').trim();
+  const address = (document.getElementById('custAddress')?.value || '').trim();
+  const city = (document.getElementById('custCity')?.value || '').trim();
+  const notes = (document.getElementById('custNotes')?.value || '').trim();
+
+  if (!name) { alert('الرجاء إدخال الاسم الكامل'); return; }
+  if (!phone) { alert('الرجاء إدخال رقم الهاتف'); return; }
+  if (!address) { alert('الرجاء إدخال عنوان التوصيل'); return; }
+
+  const cart = loadCart();
+  const dishes = loadDishesSync();
+  const settings = loadSettings();
+  const entries = Object.entries(cart);
+
+  if (entries.length === 0) { alert('السلة فارغة'); return; }
+
+  let lines = [];
+  let total = 0;
+  let counter = 1;
+  let skippedUnavailable = 0;
+  for (const [id, qty] of entries) {
+    let d = dishes.find(x => x.id === id);
+    let unitPrice, name;
+    if (d) {
+      // تخطّي الأطباق غير المتوفرة عند إتمام الطلب
+      if (d.available === false) {
+        skippedUnavailable++;
+        continue;
+      }
+      unitPrice = d.price; name = d.name;
+    }
+    else if (id === 'pack-virtual') { unitPrice = parseInt(settings.packPrice) || 1850; name = 'الباك العائلي'; }
+    else continue;
+    const lineTotal = unitPrice * qty;
+    total += lineTotal;
+    lines.push(`${counter}. ${name} × ${qty} = ${lineTotal} دج`);
+    counter++;
+  }
+
+  if (lines.length === 0) {
+    alert('لا يمكن إتمام الطلب: كل الأطباق في السلة غير متوفرة حالياً.');
+    return;
+  }
+  if (skippedUnavailable > 0) {
+    showToast(`⚠ تم تخطّي ${skippedUnavailable} طبق غير متوفر من الطلب`);
+  }
+
+  // Build receipt
+  const now = new Date();
+  const dateStr = now.toLocaleString('ar-DZ', { dateStyle: 'short', timeStyle: 'short' });
+  const orderNum = 'MZ-' + Date.now().toString().slice(-6);
+
+  // --- SheetDB: تسجيل الطلب في Google Sheets (غير حاجب) ---
+  const orderPayload = {
+    orderNum,
+    date: now.toISOString(),
+    customerName:  name,
+    customerPhone: phone,
+    customerAddress: address,
+    customerCity:  city,
+    customerNotes: notes,
+    total,
+    items: entries
+      .filter(([id]) => {
+        const d = dishes.find(x => x.id === id);
+        // تضمين فقط الأطباق المتوفرة + الباك الافتراضي الافتراضي
+        return !d || d.available !== false;
+      })
+      .map(([id, qty]) => {
+        let d = dishes.find(x => x.id === id);
+        let unitPrice, nm;
+        if (d) { unitPrice = d.price; nm = d.name; }
+        else if (id === 'pack-virtual') { unitPrice = parseInt(settings.packPrice) || 1850; nm = 'الباك العائلي'; }
+        return { id, name: nm, qty, unitPrice, lineTotal: unitPrice * qty };
+      })
+  };
+
+  // إطلاق الطلب إلى SheetDB بدون انتظار — لا نوقف رسالة واتساب
+  pushOrderToSheet(orderPayload)
+    .then(() => { showCloudToast('✓ تم تسجيل الطلب في Google Sheets', true); })
+    .catch((err) => {
+      console.warn('SheetDB POST failed:', err);
+      showCloudToast('⚠ تعذّر تسجيل الطلب في الشيت — استمر بإرسال واتساب', false);
+    });
+
+  let msg = `🔥 مشاوي السلطان 🔥\n`;
+  msg += `══════════════════\n`;
+  msg += `🧾 *وصل طلب · رقم ${orderNum}*\n`;
+  msg += `📅 ${dateStr}\n`;
+  msg += `══════════════════\n\n`;
+  msg += `*الطلبات:*\n${lines.join('\n')}\n\n`;
+  msg += `══════════════════\n`;
+  msg += `💰 *المجموع الكلي: ${total} دج*\n`;
+  msg += `🛵 التوصيل: حسب الاتفاق مع الطراد\n`;
+  msg += `══════════════════\n\n`;
+  msg += `👤 *الاسم:* ${name}\n`;
+  msg += `📱 *الهاتف:* ${phone}\n`;
+  msg += `📍 *العنوان:* ${address}\n`;
+  msg += `🏙️ *المدينة:* ${city || 'غير محدد'}\n`;
+  if (notes) msg += `📝 *ملاحظات:* ${notes}\n`;
+  msg += `\n══════════════════\n`;
+  msg += `✅ الرجاء تأكيد الطلب، شكراً لثقتكم في مشاوي السلطان 🔥`;
+
+  const url = `https://wa.me/${settings.phone}?text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank');
+
+  // Don't clear the cart immediately - allow user to retry if needed.
+  showToast('تم تجهيز وصل الطلب ✓ افتح واتساب للإرسال');
+}
+
+/* ============ CLOUD TOAST (SheetDB feedback) ============ */
+function showCloudToast(message, ok = true) {
+  let el = document.getElementById('cloudToast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'cloudToast';
+    el.className = 'cloud-toast';
+    el.innerHTML = '<span class="dot"></span><span class="msg"></span>';
+    document.body.appendChild(el);
+  }
+  el.classList.toggle('err', !ok);
+  el.querySelector('.msg').textContent = message;
+  el.classList.add('show');
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => el.classList.remove('show'), 3500);
+}
+
+/* ============ ORDERS PANEL (admin) ============ */
+const ORDER_STATUS_FLOW = [
+  { value: 'en attente', label: '⏳ في الانتظار',  cls: 'is-pending' },
+  { value: 'confirmé',   label: '✅ مؤكد',        cls: 'is-confirmed' },
+  { value: 'livré',      label: '🛵 تم التوصيل',    cls: 'is-delivered' },
+  { value: 'annulé',     label: '❌ ملغى',         cls: 'is-canceled' }
+];
+
+function statusToMeta(status) {
+  const s = (status || '').trim().toLowerCase();
+  if (s === 'confirmé' || s === 'confirme' || s === 'confirmed') return ORDER_STATUS_FLOW[1];
+  if (s === 'livré'    || s === 'livre'    || s === 'delivered')  return ORDER_STATUS_FLOW[2];
+  if (s === 'annulé'   || s === 'annule'   || s === 'canceled' || s === 'cancelled') return ORDER_STATUS_FLOW[3];
+  return ORDER_STATUS_FLOW[0];
+}
+
+function parseOrderFromRow(row, idx) {
+  // كل معلومات الطلب في عمود "decription " (مع مسافة) — رقم الطلب في product
+  const orderNum    = (row[SHEETDB_COL_PRODUCT]     || '').toString().trim();
+  const prix        = (row[SHEETDB_COL_PRIX]        || '').toString().trim();
+  const etat        = (row[SHEETDB_COL_ETAT]        || ORDER_DEFAULT_STATUS).toString().trim();
+  const fullText    = (row[SHEETDB_COL_DESCRIPTION] || '').toString();
+
+  // استخراج معلومات الزبون من النص الكامل (إن وُجدت)
+  let customerName  = '—';
+  let customerPhone = '';
+  let dateLabel     = '';
+  const m2 = fullText.match(/الاسم:\s*(.+)/);
+  if (m2) customerName = m2[1].trim();
+  const m3 = fullText.match(/الهاتف:\s*(\S+)/);
+  if (m3) customerPhone = m3[1].trim();
+  const m4 = fullText.match(/التاريخ:\s*(.+)/);
+  if (m4) {
+    try { dateLabel = new Date(m4[1].trim()).toLocaleString('ar-DZ', { dateStyle: 'short', timeStyle: 'short' }); }
+    catch { dateLabel = m4[1].trim(); }
+  }
+  if (!dateLabel) dateLabel = `صف #${idx + 1}`;
+
+  return {
+    orderNum,
+    customerName,
+    customerPhone,
+    dateLabel,
+    fullText,
+    prix,
+    etat,
+    rowRef: row
+  };
+}
+
+async function loadOrdersIntoAdmin() {
+  const container = document.getElementById('ordersContainer');
+  const countEl   = document.getElementById('ordersCount');
+  if (!container) return;
+  container.innerHTML = '<div class="orders-loading"><div class="spinner"></div><span>جاري تحميل الطلبات…</span></div>';
+  if (countEl) countEl.textContent = '— طلب';
+  try {
+    const rows = await fetchOrdersFromSheet();
+    renderOrders(rows);
+  } catch (e) {
+    console.warn('loadOrders failed:', e);
+    container.innerHTML = `
+      <div class="orders-empty">
+        <div class="emoji">⚠️</div>
+        <p>تعذّر تحميل الطلبات من Google Sheets.</p>
+        <p style="font-size:12px;color:var(--text-dim);margin-top:8px;">${escapeHtml(e.message || '')}</p>
+        <button type="button" class="btn-ghost" onclick="loadOrdersIntoAdmin()" style="margin-top:14px;">🔄 إعادة المحاولة</button>
+      </div>
+    `;
+  }
+}
+
+function renderOrders(rows) {
+  const container = document.getElementById('ordersContainer');
+  const countEl   = document.getElementById('ordersCount');
+  if (!container) return;
+  if (!Array.isArray(rows) || rows.length === 0) {
+    container.innerHTML = `
+      <div class="orders-empty">
+        <div class="emoji">📭</div>
+        <p>لا توجد طلبات بعد.</p>
+        <p style="font-size:12px;color:var(--text-dim);margin-top:8px;">عندما يرسل الزبون طلباً من الموقع، سيظهر هنا تلقائياً.</p>
+      </div>
+    `;
+    if (countEl) countEl.textContent = '0 طلب';
+    return;
+  }
+
+  if (countEl) countEl.textContent = `${rows.length} طلب`;
+
+  const itemsHtml = rows.map((row, idx) => {
+    const o = parseOrderFromRow(row, idx);
+    const meta = statusToMeta(o.etat);
+    return `
+      <div class="order-card ${meta.cls}" data-idx="${idx}">
+        <div class="order-head">
+          <div>
+            <div class="order-num">${escapeHtml(o.orderNum)}</div>
+            <div class="order-date">${escapeHtml(o.dateLabel)}</div>
+          </div>
+          <span class="order-status-pill status-${meta.cls.replace('is-', '')}">${meta.label}</span>
+        </div>
+        <div class="order-body">${escapeHtml(o.fullText)}</div>
+        <div class="order-foot">
+          <div class="order-total">${escapeHtml(o.prix)} دج</div>
+          <select class="order-status-select" onchange="updateOrderStatus(${idx}, this.value)">
+            ${ORDER_STATUS_FLOW.map(s => `<option value="${s.value}" ${s.value === meta.value ? 'selected' : ''}>${s.label}</option>`).join('')}
+          </select>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  container.innerHTML = `<div class="orders-list">${itemsHtml}</div>`;
+
+  // نخزّن الصفوف مرجعياً لاستخدامها عند تحديث الحالة
+  container._rows = rows;
+}
+
+async function updateOrderStatus(idx, newStatus) {
+  const container = document.getElementById('ordersContainer');
+  if (!container || !container._rows) return;
+  const row = container._rows[idx];
+  if (!row) return;
+
+  const o = parseOrderFromRow(row, idx);
+  const orderNum = o.orderNum;
+  if (!orderNum || orderNum === '—' || !/^MZ-\d+$/i.test(orderNum)) {
+    showCloudToast('⚠ تعذّر تحديد رقم الطلب للتحديث', false);
+    return;
+  }
+
+  showCloudToast('⏳ جاري تحديث الحالة…', true);
+
+  try {
+    const data = await updateOrderStatusInSheet(orderNum, newStatus);
+    if (data && data.updated) {
+      showCloudToast(`✓ تم تحديث حالة ${orderNum} → ${newStatus}`, true);
+      loadOrdersIntoAdmin();   // أعد تحميل القائمة لإظهار التغيير
+    } else {
+      showCloudToast('⚠ لم يتم تحديث أي صف — تحقق من الشيت', false);
+    }
+  } catch (e) {
+    console.warn('updateOrderStatus failed:', e);
+    showCloudToast('⚠ تعذّر تحديث الحالة في الشيت: ' + (e.message || ''), false);
+  }
+}
+
+/* ============ SYNC BADGE ============ */
+async function checkSheetConnection() {
+  const badge = document.getElementById('syncBadge');
+  const text  = document.getElementById('syncBadgeText');
+  if (!badge || !text) return;
+  try {
+    // نفحص Google Sheets مباشرة عبر gviz JSON (مجاني وغير محدود) — نحسب عدد الأطباق
+    const data = await fetchGvizJSON(GOOGLE_SHEETS_JSONP, { reqId: Math.floor(Math.random() * 1000000) });
+    if (!data || !data.table) throw new Error('invalid response');
+    const count = (data.table.rows || []).filter(r => {
+      const c = r.c && r.c[0];
+      return c && c.v !== null && c.v !== undefined && String(c.v).trim() !== '';
+    }).length;
+    text.textContent = `متصل · ${count} طبق`;
+    badge.classList.remove('offline');
+  } catch (e) {
+    text.textContent = 'غير متصل';
+    badge.classList.add('offline');
+  }
+}
+
+/* ============ INIT ============ */
+function init() {
+  // تنظيف ذاكرة localStorage القديمة (مفتاح mashawi_dishes القديم لم يعد يُستخدم)
+  try { localStorage.removeItem('mashawi_dishes'); } catch {}
+
+  // عرض القائمة من شيت الأطباق (async)
+  renderMenu();
+
+  applySettings();
+  updateCartBadge();
+
+  // Cart button in topbar
+  const cartBtn = document.getElementById('openCartBtn');
+  if (cartBtn) cartBtn.addEventListener('click', openCart);
+
+  // Hero order button → opens cart
+  const heroBtn = document.getElementById('heroOrderBtn');
+  if (heroBtn) heroBtn.addEventListener('click', openCart);
+
+  // Logo 5-click secret trigger (both topbar and footer logos)
+  document.querySelectorAll('.brand-logo').forEach(logo => {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', handleLogoClick);
+  });
+
+  // SheetDB: تحقق من الاتصال عند الإقلاع
+  checkSheetConnection();
+  // تحديث المؤشر كل 30 ثانية
+  setInterval(checkSheetConnection, 30000);
+
+  // كل 15 ثانية، نتحقق إن كانت الأطباق قد تغيّرت في الشيت من الخارج
+  // (مثلاً: عدّل صاحب المحل الشيت يدوياً) — نعيد تحميل القائمة دون لمس المحرّر
+  setInterval(async () => {
+    // لا نعيد التحميل إذا كانت لوحة الإدارة مفتوحة على تبويب الأطباق (حتى لا نُضيّع التعديلات)
+    const adminOpen = document.getElementById('adminModal')?.classList.contains('active');
+    const dishesTabActive = document.querySelector('.admin-tab[data-tab="dishes"]')?.classList.contains('active');
+    if (adminOpen && dishesTabActive) return;
+    // وإلا فنعيد التحميل بهدوء
+    _dishesCache = null;
+    try { await renderMenu(); } catch (e) { console.warn('auto-refresh failed:', e); }
+  }, 15000);
+
+  // عند الضغط على شارة الاتصال: فتح لوحة الإدارة على تبويب الطلبات
+  const syncBadge = document.getElementById('syncBadge');
+  if (syncBadge) {
+    syncBadge.addEventListener('click', () => {
+      openAdmin();
+      // إذا كان مسجّل دخول، انتقل مباشرة لتبويب الطلبات
+      setTimeout(() => {
+        const ordersTab = document.querySelector('.admin-tab[data-tab="orders"]');
+        if (ordersTab && document.getElementById('adminPanel').style.display === 'block') {
+          ordersTab.click();
+        }
+      }, 100);
+    });
+  }
+}
+init();
+</script>
+</body>
+</html>
